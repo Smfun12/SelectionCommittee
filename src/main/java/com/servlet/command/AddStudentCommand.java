@@ -15,8 +15,7 @@ public class AddStudentCommand implements Command{
 
     @Override
     public String execute(HttpServletRequest request) {
-        List<Student> students = studentService.getAllStudents();
-        request.setAttribute("students" , students);
-        return "/studentList.jsp";
+        studentService.createStudent(new Student());
+        return "/index.jsp";
     }
 }

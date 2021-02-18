@@ -1,8 +1,6 @@
 package com.servlet.filters;
 
 
-import com.servlet.model.entity.Faculty;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -15,15 +13,14 @@ public class EncodingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {
-        Faculty faculty;
         HttpServletRequest request = (HttpServletRequest) servletRequest;
+        request.setCharacterEncoding("UTF-8");
         String path = request.getRequestURI();
         if(path.contains("add-student")) {//TODO: rewrite add user roles
-            if ((faculty = (Faculty) ((HttpServletRequest) servletRequest).getSession().getAttribute("teacher")) != null) {
+            if (((HttpServletRequest) servletRequest).getSession().getAttribute("faculty") != null) {
                 filterChain.doFilter(servletRequest,servletResponse);
             }else{
                 servletResponse.getWriter().append("AccessDenied");
-                return;
             }
         }else{
             filterChain.doFilter(servletRequest,servletResponse);

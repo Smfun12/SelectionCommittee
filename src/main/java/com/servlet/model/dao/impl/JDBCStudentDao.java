@@ -23,7 +23,20 @@ public class JDBCStudentDao implements StudentDao {
 
     @Override
     public void create(Student entity) {
-        final String query ="INSERT INTO students (login,email,city,district,school) VALUES(?,?,?,?,?)";
+        final String query ="INSERT INTO students (login,email,password,city,district,school) VALUES(?,?,?,?,?,?)";
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1,entity.getLogin());
+            statement.setString(2,entity.getEmail());
+            statement.setString(3,entity.getPassword());
+            statement.setString(4,entity.getCity());
+            statement.setString(5,entity.getDistrict());
+            statement.setString(6,entity.getSchool());
+            statement.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
     }
 
     @Override

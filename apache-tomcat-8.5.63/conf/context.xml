@@ -28,7 +28,4 @@
     <Manager pathname="" />
 
     -->
-    <Resource name="jdbc/committee" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="10"
-              minIdle="5" maxWait="10000" username="root" password="root" driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/committee?serverTimezone=UTC"/>
 </Context>

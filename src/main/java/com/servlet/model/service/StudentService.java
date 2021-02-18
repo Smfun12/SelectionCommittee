@@ -16,4 +16,9 @@ public class StudentService {
             return dao.findAll();
         }
     }
+    public void createStudent(Student student){
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            dao.create(student);
+        }
+    }
 }
