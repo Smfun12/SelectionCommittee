@@ -3,7 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.*, java.text.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${param.lang}" />
+<fmt:setBundle basename="message" />
+<html lang="${param.lang}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Student List</title>
@@ -11,7 +15,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default navbar-fixed-top">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <a class="navbar-brand" href="" ><span><fmt:message key="nav"/></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,16 +23,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/"><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList"><span class="sr-only"><span><fmt:message key="faculties"/></span></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList" >Faculties <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList">Students</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList" ><span><span><fmt:message key="students"/></span></span></a>
             </li>
         </ul>
     </div>
+    <a class="nav-link" href="?lang=en">
+        <img src="static/united-kingdom.png"/>English
+    </a>
+    <a class="nav-link" href="?lang=ua">
+        <img src="static/ukraine.png"/>Ukraine
+    </a>
 </nav>
 <h2>
     List Students <br/>
@@ -69,7 +76,6 @@
 
 </table>
 <br>
-<%=request.getAttribute("students")%>
 <br/>
 <a href="${pageContext.request.contextPath}/webapp/index.jsp">index</a>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

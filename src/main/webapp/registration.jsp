@@ -7,6 +7,18 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
+
+<form method="post" action="${pageContext.request.contextPath}/app/addStudent">
+
+    <input type="text" name="login" placeholder="some text">
+    <input type="text" name="email" placeholder="some text">
+    <input type="text" name="password" placeholder="some text">
+    <input type="text" name="city" placeholder="some text">
+    <input type="text" name="district" placeholder="some text">
+    <input type="text" name="school" placeholder="some text">
+    <button>Click</button>
+</form>
+
 <form class="form-horizontal" method="post">
     <fieldset>
         <div id="legend">
@@ -71,7 +83,8 @@
         </div>
     </fieldset>
 </form>
-        <a href="${pageContext.request.contextPath}/webapp/index.jsp">Index</a>
+
+        <a href="${pageContext.request.contextPath}/index.jsp">Index</a>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

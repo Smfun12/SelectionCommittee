@@ -8,10 +8,7 @@ import com.servlet.model.entity.Faculty;
 import com.servlet.model.entity.Student;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JDBCStudentDao implements StudentDao {
     private Connection connection;
@@ -41,6 +38,22 @@ public class JDBCStudentDao implements StudentDao {
 
     @Override
     public Student findById(int id) {
+        final String query ="select * from students where studentid=?";
+        StudentMapper studentMapper = new StudentMapper();
+
+        try {
+            Student student = null;
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1,id);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+            student = studentMapper.extractFromResultSet(resultSet);
+            }
+            if (student != null)
+                return student;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -78,7 +91,21 @@ public class JDBCStudentDao implements StudentDao {
 
     @Override
     public void update(Student entity) {
-
+        final String query ="UPDATE students set login=?,email=?,password=?,city=?" +
+                ",district=?,school=? where studentid=?";
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1,entity.getLogin());
+            statement.setString(2,entity.getEmail());
+            statement.setString(3,entity.getPassword());
+            statement.setString(4,entity.getCity());
+            statement.setString(5,entity.getDistrict());
+            statement.setString(6,entity.getSchool());
+            statement.setInt(7,entity.getId());
+            statement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override

@@ -4,25 +4,26 @@ import com.servlet.model.entity.Student;
 import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
-public class AddStudentCommand implements Command{
+public class EditStudentCommand implements Command{
     private StudentService studentService;
 
-    public AddStudentCommand(StudentService studentService) {
+    public EditStudentCommand(StudentService studentService) {
         this.studentService = studentService;
     }
 
     @Override
     public String execute(HttpServletRequest request){
+        int id = Integer.parseInt(request.getParameter("id"));
         Student student = new Student();
+        student.setId(id);
         student.setLogin(request.getParameter("login"));
         student.setEmail(request.getParameter("email"));
         student.setPassword(request.getParameter("password"));
         student.setCity(request.getParameter("city"));
         student.setDistrict(request.getParameter("district"));
         student.setSchool(request.getParameter("school"));
-        studentService.createStudent(student);
-        return "redirect:/index.jsp";
+        studentService.updateStudent(student);
+        return "/index.jsp";
     }
 }

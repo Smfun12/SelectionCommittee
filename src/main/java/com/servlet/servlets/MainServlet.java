@@ -24,16 +24,22 @@ public class MainServlet extends HttpServlet {
         commands.put("studentList", new StudentListCommand(new StudentService()));
         commands.put("facultyList", new FacultyListCommand(new FacultyService()));
         commands.put("addStudent", new AddStudentCommand(new StudentService()));
+        commands.put("showEditPage", new EditStudentPageCommand(new StudentService()));
+        commands.put("editStudent/id=1", new EditStudentCommand(new StudentService()));
+        System.out.println("***************************INIT***************************");
     }
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws IOException, ServletException {
+        System.out.println("***************************GET***************************");
         processRequest(request, response);
+
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+        System.out.println("***************************POST***************************");
         processRequest(request, response);
     }
 
@@ -45,7 +51,7 @@ public class MainServlet extends HttpServlet {
         path = path.replaceAll(".*/app/" , "");
         System.out.println(path);
         Command command = commands.getOrDefault(path ,
-                (r)->"/index.jsp)");
+                (r)->"/index.jsp");
         String page = command.execute(request);
         if(page.contains("redirect:")){
             response.sendRedirect(page.replace("redirect:", "/"));

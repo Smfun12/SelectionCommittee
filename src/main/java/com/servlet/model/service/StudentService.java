@@ -21,4 +21,16 @@ public class StudentService {
             dao.create(student);
         }
     }
+
+    public Student findById(int id){
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            return dao.findById(id);
+        }
+    }
+
+    public void updateStudent(Student student) {
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            dao.update(student);
+        }
+    }
 }

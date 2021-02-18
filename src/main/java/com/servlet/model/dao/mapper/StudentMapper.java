@@ -16,6 +16,10 @@ public class StudentMapper implements ObjectMapper<Student> {
         student.setId(rs.getInt("studentid"));
         student.setLogin(rs.getString("login"));
         student.setEmail(rs.getString("email"));
+        student.setPassword(rs.getString("password"));
+        student.setCity(rs.getString("city"));
+        student.setDistrict(rs.getString("district"));
+        student.setSchool(rs.getString("school"));
         return student;
     }
 
