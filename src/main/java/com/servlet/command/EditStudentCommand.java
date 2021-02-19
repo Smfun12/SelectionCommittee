@@ -24,6 +24,6 @@ public class EditStudentCommand implements Command{
         student.setDistrict(request.getParameter("district"));
         student.setSchool(request.getParameter("school"));
         studentService.updateStudent(student);
-        return "/index.jsp";
+        return "/studentList.jsp";
     }
 }

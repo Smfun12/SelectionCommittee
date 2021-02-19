@@ -11,9 +11,9 @@ public class StudentService {
 
     DaoFactory daoFactory = DaoFactory.getInstance();
 
-    public List<Student> getAllStudents(){
+    public List<Student> getAllStudents(int start, int total){
         try (StudentDao dao = daoFactory.createStudentDao()) {
-            return dao.findAll();
+            return dao.findAll(start,total);
         }
     }
     public void createStudent(Student student){
@@ -31,6 +31,12 @@ public class StudentService {
     public void updateStudent(Student student) {
         try (StudentDao dao = daoFactory.createStudentDao()) {
             dao.update(student);
+        }
+    }
+
+    public void deleteStudent(int id) {
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            dao.delete(id);
         }
     }
 }

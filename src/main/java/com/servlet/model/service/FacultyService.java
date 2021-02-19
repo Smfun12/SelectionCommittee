@@ -13,9 +13,35 @@ public class FacultyService {
 
     DaoFactory daoFactory = DaoFactory.getInstance();
 
-    public List<Faculty> getAllFaculties(){
+    public List<Faculty> getAllFaculties(int start, int total){
         try (FacultyDao dao = daoFactory.createFacultyDao()) {
-            return dao.findAll();
+            return dao.findAll(start, total);
         }
     }
+
+    public void createFaculty(Faculty faculty) {
+        try (FacultyDao dao = daoFactory.createFacultyDao()) {
+            dao.create(faculty);
+        }
+    }
+
+    public Faculty findById(int id){
+        try (FacultyDao dao = daoFactory.createFacultyDao()) {
+            return dao.findById(id);
+        }
+    }
+
+    public void updateFaculty(Faculty faculty) {
+        try (FacultyDao dao = daoFactory.createFacultyDao()) {
+            dao.update(faculty);
+        }
+    }
+
+    public void deleteFaculty(int id) {
+        try (FacultyDao dao = daoFactory.createFacultyDao()) {
+            dao.delete(id);
+        }
+    }
+
+
 }

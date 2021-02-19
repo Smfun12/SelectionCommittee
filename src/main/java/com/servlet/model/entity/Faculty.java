@@ -116,11 +116,15 @@ public class Faculty {
     @Override
     public String toString() {
         return "Faculty{" +
-                "faculty_id=" + facultyid +
+                "facultyid=" + facultyid +
                 ", title='" + title + '\'' +
-                ", totalPlaces=" + totalPlaces +
                 ", budgetPlaces=" + budgetPlaces +
                 ", contractPlaces=" + contractPlaces +
+                ", totalPlaces=" + totalPlaces +
+                ", firstSubject='" + firstSubject + '\'' +
+                ", secondSubject='" + secondSubject + '\'' +
+                ", thirdSubject='" + thirdSubject + '\'' +
+                ", students=" + students +
                 '}';
     }
 }

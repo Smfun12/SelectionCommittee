@@ -17,7 +17,20 @@ public class FacultyListCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        List<Faculty> faculties = facultyService.getAllFaculties();
+        int start = Integer.parseInt(request.getParameter("currentPage"));
+        int total = Integer.parseInt(request.getParameter("recordsPerPage"));
+
+        List<Faculty> faculties = facultyService.getAllFaculties(start,total);
+
+        int nOfPages = faculties.size() / total;
+
+        if (nOfPages % total > 0) {
+
+            nOfPages++;
+        }
+        request.setAttribute("noOfPages", nOfPages);
+        request.setAttribute("currentPage", start);
+        request.setAttribute("total", total);
         request.setAttribute("faculties" , faculties);
         return "/facultyList.jsp";
     }

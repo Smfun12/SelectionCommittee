@@ -12,7 +12,7 @@
     <hr>
     <h2>Update Student</h2>
 
-    <form action="${pageContext.request.contextPath}/app/editStudent/id=${id}"
+    <form action="${pageContext.request.contextPath}/app/editStudent"
           method="post">
 
         <!-- Add hidden form field to handle update -->

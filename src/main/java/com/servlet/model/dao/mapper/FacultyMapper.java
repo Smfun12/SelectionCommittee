@@ -12,7 +12,13 @@ public class FacultyMapper implements ObjectMapper<Faculty> {
     public Faculty extractFromResultSet(ResultSet rs) throws SQLException {
         Faculty faculty = new Faculty();
         faculty.setFacultyid(rs.getInt("facultyid"));
-//        faculty.setTitle(rs.getString("title"));
+        faculty.setTitle(rs.getString("title"));
+        faculty.setTotalPlaces(rs.getInt("totalPlaces"));
+        faculty.setBudgetPlaces(rs.getInt("budgetPlaces"));
+        faculty.setContractPlaces(rs.getInt("contractPlaces"));
+        faculty.setFirstSubject(rs.getString("firstSubject"));
+        faculty.setSecondSubject(rs.getString("secondSubject"));
+        faculty.setThirdSubject(rs.getString("thirdSubject"));
         return faculty;
     }
 

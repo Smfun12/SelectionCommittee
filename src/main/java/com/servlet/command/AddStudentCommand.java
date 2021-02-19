@@ -23,6 +23,6 @@ public class AddStudentCommand implements Command{
         student.setDistrict(request.getParameter("district"));
         student.setSchool(request.getParameter("school"));
         studentService.createStudent(student);
-        return "redirect:/index.jsp";
+        return "/index.jsp";
     }
 }

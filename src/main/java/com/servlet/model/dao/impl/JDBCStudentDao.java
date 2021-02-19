@@ -58,27 +58,19 @@ public class JDBCStudentDao implements StudentDao {
     }
 
     @Override
-    public List<Student> findAll() {
+    public List<Student> findAll(int start, int total) {
         Map<Integer, Student> students = new HashMap<>();
-        Map<Integer, Faculty> facultyMap = new HashMap<>();
 
-        final String query ="select * from students";
+        final String query ="select * from students limit " + (start-1)+"," + total;
         try (Statement st = connection.createStatement()) {
             ResultSet rs = st.executeQuery(query);
 
-            FacultyMapper facultyMapper = new FacultyMapper();
             StudentMapper studentMapper = new StudentMapper();
 
             while (rs.next()) {
                 Student student = studentMapper
                         .extractFromResultSet(rs);
-                Faculty faculty = facultyMapper
-                        .extractFromResultSet(rs);
-                student = studentMapper
-                        .makeUnique(students, student);
-                faculty = facultyMapper
-                        .makeUnique(facultyMap, faculty);
-                student.getFaculties().add(faculty);
+                studentMapper.makeUnique(students, student);
             }
             return new ArrayList<>(students.values());
         } catch (SQLException e) {
@@ -110,7 +102,8 @@ public class JDBCStudentDao implements StudentDao {
 
     @Override
     public void delete(int id) {
-
+        final String query ="DELETE FROM students WHERE studentid=?";
+        JDBCFacultyDao.deleteEntity(id, query, connection);
     }
 
     @Override

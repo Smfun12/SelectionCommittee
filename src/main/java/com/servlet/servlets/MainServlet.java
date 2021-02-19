@@ -24,8 +24,14 @@ public class MainServlet extends HttpServlet {
         commands.put("studentList", new StudentListCommand(new StudentService()));
         commands.put("facultyList", new FacultyListCommand(new FacultyService()));
         commands.put("addStudent", new AddStudentCommand(new StudentService()));
-        commands.put("showEditPage", new EditStudentPageCommand(new StudentService()));
-        commands.put("editStudent/id=1", new EditStudentCommand(new StudentService()));
+        commands.put("showEditStudentPage", new EditStudentPageCommand(new StudentService()));
+        commands.put("editStudent", new EditStudentCommand(new StudentService()));
+        commands.put("deleteStudent", new DeleteStudentCommand(new StudentService()));
+        commands.put("addFacultyPage", new AddFacultyPageCommand());
+        commands.put("addFaculty", new AddFacultyCommand(new FacultyService()));
+        commands.put("showEditFacultyPage", new EditFacultyPageCommand(new FacultyService()));
+        commands.put("editFaculty", new EditFacultyCommand(new FacultyService()));
+        commands.put("deleteFaculty", new DeleteFacultyCommand(new FacultyService()));
         System.out.println("***************************INIT***************************");
     }
 

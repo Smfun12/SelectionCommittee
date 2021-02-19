@@ -14,13 +14,16 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default navbar-fixed-top">
         <a class="navbar-brand" href="" ><span><fmt:message key="nav"/></span></a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5"><span><fmt:message key="faculties"/></span></a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList"><span><fmt:message key="students"/></span></a>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList"><span class="sr-only"><span><fmt:message key="faculties"/></span></span></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList"><span><fmt:message key="faculties"/></span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList" ><span><span><fmt:message key="students"/></span></span></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList" ><span><fmt:message key="students"/></span></a>
                 </li>
             </ul>
         </div>
