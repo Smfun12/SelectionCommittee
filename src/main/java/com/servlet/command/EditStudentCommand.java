@@ -4,6 +4,7 @@ import com.servlet.model.entity.Student;
 import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 
 public class EditStudentCommand implements Command{
     private StudentService studentService;
@@ -23,7 +24,12 @@ public class EditStudentCommand implements Command{
         student.setCity(request.getParameter("city"));
         student.setDistrict(request.getParameter("district"));
         student.setSchool(request.getParameter("school"));
-        studentService.updateStudent(student);
-        return "/studentList.jsp";
+        try {
+            studentService.updateStudent(student);
+        } catch (SQLException e) {
+            request.setAttribute("exception",e.getMessage());
+            return "/WEB-INF/error.jsp";
+        }
+        return "/app/studentList.jsp";
     }
 }

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${param.lang}" />
+<fmt:setBundle basename="message" />
+<html lang="${param.lang}">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet"
@@ -8,9 +12,13 @@
 </head>
 <body>
 <div class="container">
-    <h1>Student Management System</h1>
+    <h1>
+        <fmt:message key="edit_system_student" />
+    </h1>
     <hr>
-    <h2>Update Student</h2>
+    <h2>
+        <fmt:message key="edit_student" />
+</h2>
 
     <form action="${pageContext.request.contextPath}/app/editStudent"
           method="post">
@@ -30,12 +38,20 @@
 
         <input type="text" name="school" value="${school}" class="form-control mb-4 col-4">
 
-        <button class="btn btn-info col-2"> Update Student</button>
+        <button class="btn btn-info col-2">
+            <span>
+                        <fmt:message key="edit_student" />
+            </span>
+        </button>
     </form>
 
     <hr>
 
-    <a href = "${pageContext.request.contextPath}/app/studentList"> Back to Find List</a>
+    <a href = "${pageContext.request.contextPath}/app/studentList">
+        <span>
+                    <fmt:message key="back_to_list" />
+        </span>
+    </a>
 </div>
 </body>
 </html>

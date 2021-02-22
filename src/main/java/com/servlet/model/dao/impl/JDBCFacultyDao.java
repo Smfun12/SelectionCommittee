@@ -3,12 +3,10 @@ package com.servlet.model.dao.impl;
 import com.servlet.model.dao.FacultyDao;
 import com.servlet.model.dao.mapper.FacultyMapper;
 import com.servlet.model.entity.Faculty;
+import com.servlet.model.entity.Student;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JDBCFacultyDao implements FacultyDao {
     private Connection connection;
@@ -85,23 +83,28 @@ public class JDBCFacultyDao implements FacultyDao {
     }
 
     @Override
-    public void update(Faculty entity) {
+    public List<Faculty> findAll() {
+        return null;
+    }
+
+    @Override
+    public void update(Faculty entity)throws SQLException {
         final String query ="UPDATE faculties set title=?,totalPlaces=?,budgetPlaces=?," +
                 "contractPlaces=?" +
                 ",firstSubject=?,secondSubject=?,thirdSubject=? where facultyid=?";
         try {
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,entity.getTitle());
-            statement.setInt(2,entity.getTotalPlaces());
-            statement.setInt(3,entity.getBudgetPlaces());
-            statement.setInt(4,entity.getContractPlaces());
-            statement.setString(5,entity.getFirstSubject());
-            statement.setString(6,entity.getSecondSubject());
-            statement.setString(7,entity.getThirdSubject());
-            statement.setInt(8,entity.getFacultyid());
+            statement.setString(1, entity.getTitle());
+            statement.setInt(2, entity.getTotalPlaces());
+            statement.setInt(3, entity.getBudgetPlaces());
+            statement.setInt(4, entity.getContractPlaces());
+            statement.setString(5, entity.getFirstSubject());
+            statement.setString(6, entity.getSecondSubject());
+            statement.setString(7, entity.getThirdSubject());
+            statement.setInt(8, entity.getFacultyid());
             statement.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } finally {
+
         }
     }
 
@@ -119,10 +122,26 @@ public class JDBCFacultyDao implements FacultyDao {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
     }
 
     @Override
     public void close()  {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+    }
 
+    @Override
+    public Optional<Student> findByLogin(String login) {
+        return Optional.empty();
     }
 }

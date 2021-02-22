@@ -32,6 +32,7 @@ public class MainServlet extends HttpServlet {
         commands.put("showEditFacultyPage", new EditFacultyPageCommand(new FacultyService()));
         commands.put("editFaculty", new EditFacultyCommand(new FacultyService()));
         commands.put("deleteFaculty", new DeleteFacultyCommand(new FacultyService()));
+        commands.put("applyOnFaculty",new ApplyOnFacultyCommand(new StudentService(), new FacultyService()));
         System.out.println("***************************INIT***************************");
     }
 

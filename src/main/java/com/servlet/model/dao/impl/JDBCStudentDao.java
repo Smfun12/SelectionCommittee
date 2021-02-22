@@ -54,7 +54,44 @@ public class JDBCStudentDao implements StudentDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
         return null;
+
+    }
+
+
+    @Override
+    public Optional<Student> findByLogin(String login) {
+        final String query ="select * from students where login=?";
+        StudentMapper studentMapper = new StudentMapper();
+
+        try {
+            Optional<Student> student = Optional.empty();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1,login);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                student = Optional.ofNullable(studentMapper.extractFromResultSet(resultSet));
+            }
+            if (student.isPresent())
+                return student;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return Optional.empty();
     }
 
     @Override
@@ -75,8 +112,45 @@ public class JDBCStudentDao implements StudentDao {
             return new ArrayList<>(students.values());
         } catch (SQLException e) {
             e.printStackTrace();
-            return null;
+
         }
+        finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public List<Student> findAll() {
+        Map<Integer, Student> students = new HashMap<>();
+
+        final String query ="select * from students";
+        try (Statement st = connection.createStatement()) {
+            ResultSet rs = st.executeQuery(query);
+
+            StudentMapper studentMapper = new StudentMapper();
+
+            while (rs.next()) {
+                Student student = studentMapper
+                        .extractFromResultSet(rs);
+                studentMapper.makeUnique(students, student);
+            }
+            return new ArrayList<>(students.values());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return null;
     }
 
 
@@ -98,6 +172,13 @@ public class JDBCStudentDao implements StudentDao {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -114,4 +195,5 @@ public class JDBCStudentDao implements StudentDao {
             throw new RuntimeException(e);
         }
     }
+
 }

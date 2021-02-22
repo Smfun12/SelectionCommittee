@@ -7,6 +7,7 @@ import com.servlet.model.dao.StudentDao;
 import com.servlet.model.entity.Faculty;
 import com.servlet.model.entity.Student;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class FacultyService {
@@ -31,7 +32,7 @@ public class FacultyService {
         }
     }
 
-    public void updateFaculty(Faculty faculty) {
+    public void updateFaculty(Faculty faculty) throws SQLException {
         try (FacultyDao dao = daoFactory.createFacultyDao()) {
             dao.update(faculty);
         }

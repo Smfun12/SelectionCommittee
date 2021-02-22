@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default navbar-fixed-top">
         <a class="navbar-brand" href="" ><span><fmt:message key="nav"/></span></a>
         <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5"><span><fmt:message key="faculties"/></span></a>
-        <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList"><span><fmt:message key="students"/></span></a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList?currentPage=1&recordsPerPage=5"><span><fmt:message key="students"/></span></a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -27,9 +27,10 @@
                 </li>
             </ul>
         </div>
-        <form action="${pageContext.request.contextPath}/app/registration">
-            <button type="submit" class="btn btn-info"><span><fmt:message key="sign_up"/></span></button>
-        </form>
+            <a href="${pageContext.request.contextPath}/app/registration"
+               class="btn btn-info"><span><fmt:message key="sign_up"/></span></a>
+        <a href="${pageContext.request.contextPath}/app/login"
+           class="btn btn-info"><span><fmt:message key="sign_in"/></span></a>
         <a class="nav-link" href="?lang=en">
             <img src="static/united-kingdom.png"/>English
         </a>

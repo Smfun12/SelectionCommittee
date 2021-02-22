@@ -2,67 +2,88 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SelectionCommittee:war exploded" />
+      <artifact name="selection:war" />
     </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a2c0b43-b861-4736-a3c0-4c0ff47bbc68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addFaculty.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/enums/Roles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/applyOnFaculty.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/userProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3087c753-86f7-4358-b1a7-bd785aa04e71.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/catalina.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/catalina.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/ciphers.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/ciphers.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/configtest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/configtest.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/daemon.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/daemon.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/digest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/digest.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/setclasspath.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/setclasspath.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/shutdown.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/shutdown.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/startup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tcnative-1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tcnative-1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tomcat8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tomcat8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tool-wrapper.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tool-wrapper.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/version.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/version.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/desktop.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/ConnectionPoolHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/ConnectionPoolHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Faculty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facultyList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/AddStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/AddStudentCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/FacultyListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/FacultyListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/StudentListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/StudentListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/filters/EncodingFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/filters/EncodingFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/GenericDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/FacultyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/FacultyMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/entity/Faculty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/entity/Faculty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/service/FacultyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/service/FacultyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/servlets/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/servlets/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/AddStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/AddStudentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/FacultyListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/FacultyListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/StudentListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/StudentListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/filters/EncodingFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/filters/EncodingFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/GenericDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/mapper/FacultyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/mapper/FacultyMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/entity/Faculty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/entity/Faculty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/FacultyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/FacultyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/servlets/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/servlets/MainServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/facultyList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentEdit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentList.jsp" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,107 +119,10 @@
     </expand>
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3087c753-86f7-4358-b1a7-bd785aa04e71/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentListCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCFacultyDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCStudentDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacultyListCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="facultyList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/facultyList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCDaoFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#488#489#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacultyService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -305,6 +229,7 @@
     <option name="width" value="1364" />
     <option name="height" value="726" />
   </component>
+  <component name="ProjectId" id="1ooPctmQnPOylQWDh1POFrkEEsG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -471,13 +396,20 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/epam/StudentDB/StudentDBwithoutTeg/StudentDB" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -490,31 +422,19 @@
       <recent name="com.servlet.command" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\command" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\filters" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\webapp" />
-      <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\webapp\static" />
-      <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\apache-tomcat-8.5.63\lib" />
-      <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\lib" />
-      <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.servlet.command" />
       <recent name="com.servlet.model.service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\webapp" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Selection-Committee">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -527,65 +447,50 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Selection-Committee" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.63" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="SelectionCommittee:war exploded">
+        <artifact name="selection:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/selection_war" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_SelectionCommittee" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="50247" />
       </RunnerSettings>
@@ -619,6 +524,21 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -634,15 +554,16 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method>
+      <method v="2">
+        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="SelectionCommittee:war exploded" />
+          <artifact name="selection:war" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Selection-Committee" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Tomcat Server.Selection-Committee" />
     </list>
     <recent_temporary>
       <list>
@@ -650,6 +571,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -670,6 +592,8 @@
       <workItem from="1613656889728" duration="4965000" />
       <workItem from="1613662111749" duration="5494000" />
       <workItem from="1613679015945" duration="13733000" />
+      <workItem from="1613950065139" duration="3825000" />
+      <workItem from="1614012946664" duration="4205000" />
     </task>
     <servers />
   </component>
@@ -755,34 +679,29 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="60" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="77" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -895,7 +814,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/sql/PreparedStatement.java">
+    <entry file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk1.8.0_191/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />

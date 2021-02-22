@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${param.lang}" />
+<fmt:setBundle basename="message" />
+<html lang="${param.lang}">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet"
@@ -8,9 +12,13 @@
 </head>
 <body>
 <div class="container">
-    <h1>Faculty Management System</h1>
+    <h1>
+        <fmt:message key="edit_system_faculty" />
+    </h1>
     <hr>
-    <h2>Update Faculty</h2>
+    <h2>
+        <fmt:message key="edit_faculty"/>
+    </h2>
 
     <form action="${pageContext.request.contextPath}/app/editFaculty"
           method="post">
@@ -22,7 +30,7 @@
 
         <input type="text" name="totalPlaces" value="${totalPlaces}" class="form-control mb-4 col-4">
 
-        <input type="hidden" name="budgetPlaces" value="${budgetPlaces}" class="form-control mb-4 col-4">
+        <input type="text" name="budgetPlaces" value="${budgetPlaces}" class="form-control mb-4 col-4">
 
         <input type="text" name="contractPlaces" value="${contractPlaces}" class="form-control mb-4 col-4">
 
@@ -37,7 +45,11 @@
 
     <hr>
 
-    <a href = "${pageContext.request.contextPath}/app/facultyList"> Back to Find List</a>
+    <a href = "${pageContext.request.contextPath}/app/facultyList">
+        <span>
+                    <fmt:message key="back_to_list" />
+        </span>
+    </a>
 </div>
 </body>
 </html>

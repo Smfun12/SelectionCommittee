@@ -7,19 +7,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-
-<form method="post" action="${pageContext.request.contextPath}/app/addStudent">
-
-    <input type="text" name="login" placeholder="some text">
-    <input type="text" name="email" placeholder="some text">
-    <input type="text" name="password" placeholder="some text">
-    <input type="text" name="city" placeholder="some text">
-    <input type="text" name="district" placeholder="some text">
-    <input type="text" name="school" placeholder="some text">
-    <button>Click</button>
-</form>
-
-<form class="form-horizontal" method="post">
+<form class="form-horizontal" action="${pageContext.request.contextPath}/app/addStudent" method="post">
     <fieldset>
         <div id="legend">
             <legend class="">Register</legend>
@@ -78,7 +66,7 @@
         <div class="control-group">
             <!-- Button -->
             <div class="controls">
-                <a href="${pageContext.request.contextPath}/app/addStudent" class="btn btn-success">Register</a>
+                <button class="btn btn-success">Register</button>
             </div>
         </div>
     </fieldset>

@@ -15,7 +15,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default navbar-fixed-top">
-    <a class="navbar-brand" href="" ><span><fmt:message key="nav"/></span></a>
+    <a class="navbar-brand" href="${pageContext.request.contextPath}" ><span><fmt:message key="nav"/></span></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList"><span><fmt:message key="faculties"/></span></a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5"><span><fmt:message key="faculties"/></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList"><span><fmt:message key="students"/></span></a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList?currentPage=1&recordsPerPage=5"><span><fmt:message key="students"/></span></a>
             </li>
         </ul>
     </div>
@@ -71,6 +71,10 @@
             <form action="${pageContext.request.contextPath}/app/showEditFacultyPage" method="get">
                 <input type="hidden" name="id" value="${faculty.facultyid}"/>
                 <button class="btn btn-info"> <fmt:message key="update"/></button>
+            </form>
+            <form action="${pageContext.request.contextPath}/app/deleteFaculty" method="get">
+                <input type="hidden" name="id" value="${faculty.facultyid}"/>
+                <button class="btn btn-danger"><fmt:message key="delete"/></button>
             </form>
             <form action="${pageContext.request.contextPath}/app/deleteFaculty" method="get">
                 <input type="hidden" name="id" value="${faculty.facultyid}"/>
