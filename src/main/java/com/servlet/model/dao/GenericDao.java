@@ -7,13 +7,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface GenericDao<T> extends AutoCloseable {
-    void create(T entity);
-    T findById(int id);
-    List<T> findAll(int start, int total);
+    void create(T entity) throws SQLException;
+    Optional<T> findById(int id) throws SQLException;
+    List<T> findAll(int start, int total,String sortBy,String order);
     List<T> findAll();
     void update(T entity) throws SQLException;
     void delete(int id);
     void close();
 
-    Optional<Student> findByLogin(String login);
 }

@@ -19,9 +19,13 @@ class CommandUtility {
     }
 
     static boolean checkUserIsLogged(HttpServletRequest request, String userName){
-        HashSet<String> loggedUsers = (HashSet<String>) request.getSession().getServletContext()
-                .getAttribute("loggedUsers");
-
+        HashSet<String> loggedUsers = (HashSet<String>) request.getSession().getServletContext().getAttribute("loggedUsers");
+        if (loggedUsers == null) {
+            loggedUsers = new HashSet<>();
+            loggedUsers.add(userName);
+            request.getSession().getServletContext().setAttribute("loggedUsers", loggedUsers);
+            return false;
+        }
         if(loggedUsers.stream().anyMatch(userName::equals)){
             return true;
         }

@@ -24,10 +24,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5"><span><fmt:message key="faculties"/></span></a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5&sortBy=facultyid&order=asc"><span><fmt:message key="faculties"/></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList?currentPage=1&recordsPerPage=5"><span><fmt:message key="students"/></span></a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList?currentPage=1&recordsPerPage=5&sortBy=studentid&order=asc"><span><fmt:message key="students"/></span></a>
             </li>
         </ul>
     </div>
@@ -42,19 +42,34 @@
     <thead>
     <tr>
         <th scope="col">
-                #
+            #
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=facultyid&order=desc" >↓</a>
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=facultyid&order=asc" >↑</a>
+
         </th>
         <th scope="col">
                 Title
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=title&order=desc" >↓</a>
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=title&order=asc" >↑</a>
+
         </th>
         <th scope="col">
                 Total Places
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=totalPlaces&order=desc" >↓</a>
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=totalPlaces&order=asc" >↑</a>
+
         </th>
         <th scope="col">
                 Budget Places
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=budgetPlaces&order=desc" >↓</a>
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=budgetPlaces&order=asc" >↑</a>
+
         </th>
         <th scope="col">
                 Contract Places
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=contractPlaces&order=desc" >↓</a>
+            <a href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=contractPlaces&order=asc" >↑</a>
+
         </th>
         <th scope="col">Actions</th>
     </tr>
@@ -68,18 +83,16 @@
         <td>${faculty.budgetPlaces}</td>
         <td>${faculty.contractPlaces}</td>
         <td>
-            <form action="${pageContext.request.contextPath}/app/showEditFacultyPage" method="get">
-                <input type="hidden" name="id" value="${faculty.facultyid}"/>
-                <button class="btn btn-info"> <fmt:message key="update"/></button>
-            </form>
-            <form action="${pageContext.request.contextPath}/app/deleteFaculty" method="get">
-                <input type="hidden" name="id" value="${faculty.facultyid}"/>
-                <button class="btn btn-danger"><fmt:message key="delete"/></button>
-            </form>
-            <form action="${pageContext.request.contextPath}/app/deleteFaculty" method="get">
-                <input type="hidden" name="id" value="${faculty.facultyid}"/>
-                <button class="btn btn-danger"><fmt:message key="delete"/></button>
-            </form>
+                <a href="${pageContext.request.contextPath}/app/showEditFacultyPage?facultyid=${faculty.facultyid}"
+                   class="btn btn-info"> <fmt:message key="update"/></a>
+                <a href="${pageContext.request.contextPath}/app/deleteFaculty?facultyid=${faculty.facultyid}"
+                   class="btn btn-danger"><fmt:message key="delete"/></a>
+                <a href="${pageContext.request.contextPath}/app/applyOnFaculty?facultyid=${faculty.facultyid}"
+                   class="btn btn-success"><fmt:message key="apply"/></a>
+                <a href="${pageContext.request.contextPath}/app/showStudentsOnFaculty?facultyid=${faculty.facultyid}"
+                   class="btn btn-outline-success">
+                    ${faculty.students.size()}
+                </a>
 
         </td>
         </c:forEach>
@@ -92,7 +105,7 @@
     <ul class="pagination">
         <c:if test="${currentPage != 1}">
             <li class="page-item"><a class="page-link"
-                                     href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage-1}&recordsPerPage=${total}">Previous</a>
+                                     href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage-1}&recordsPerPage=${total}&sortBy=${sortBy}&order=${order}">Previous</a>
             </li>
         </c:if>
 
@@ -105,7 +118,7 @@
                 </c:when>
                 <c:otherwise>
                     <li class="page-item"><a class="page-link"
-                                             href="${pageContext.request.contextPath}/app/facultyList?currentPage=${i}&recordsPerPage=${total}">${i}</a>
+                                             href="${pageContext.request.contextPath}/app/facultyList?currentPage=${i}&recordsPerPage=${total}&sortBy=${sortBy}&order=${order}">${i}</a>
                     </li>
                 </c:otherwise>
             </c:choose>
@@ -113,7 +126,7 @@
 
         <c:if test="${currentPage lt noOfPages}">
             <li class="page-item"><a class="page-link"
-                                     href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage+1}&recordsPerPage=${total}">Next</a>
+                                     href="${pageContext.request.contextPath}/app/facultyList?currentPage=${currentPage+1}&recordsPerPage=${total}&sortBy=${sortBy}&order=${order}">Next</a>
             </li>
         </c:if>
     </ul>

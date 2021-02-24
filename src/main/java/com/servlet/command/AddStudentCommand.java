@@ -1,10 +1,11 @@
 package com.servlet.command;
 
 import com.servlet.model.entity.Student;
+import com.servlet.model.entity.enums.Roles;
 import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import java.sql.SQLException;
 
 public class AddStudentCommand implements Command{
     private StudentService studentService;
@@ -22,7 +23,13 @@ public class AddStudentCommand implements Command{
         student.setCity(request.getParameter("city"));
         student.setDistrict(request.getParameter("district"));
         student.setSchool(request.getParameter("school"));
-        studentService.createStudent(student);
+        student.setRoles(Roles.USER);
+        try {
+            studentService.createStudent(student);
+        } catch (SQLException e) {
+            request.setAttribute("exception","Student exist or check credentials");
+            return "/WEB-INF/error.jsp";
+        }
         return "/index.jsp";
     }
 }

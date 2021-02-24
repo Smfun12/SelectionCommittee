@@ -31,9 +31,9 @@ public class EditFacultyCommand implements Command{
             facultyService.updateFaculty(faculty);
         }
         catch (SQLException e){
-            request.setAttribute("exception",e.getMessage());
+            request.setAttribute("exception","Faculty exists");
             return "/WEB-INF/error.jsp";
         }
-        return "/studentList.jsp";
+        return "/WEB-INF/admin/adminbasis.jsp";
     }
 }

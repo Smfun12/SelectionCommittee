@@ -19,8 +19,9 @@ public class FacultyListCommand implements Command {
     public String execute(HttpServletRequest request) {
         int start = Integer.parseInt(request.getParameter("currentPage"));
         int total = Integer.parseInt(request.getParameter("recordsPerPage"));
-
-        List<Faculty> faculties = facultyService.getAllFaculties(start,total);
+        String sortBy = request.getParameter("sortBy");
+        String order = request.getParameter("order");
+        List<Faculty> faculties = facultyService.getAllFaculties(start,total,sortBy,order);
 
         int nOfPages = faculties.size() / total;
 
@@ -32,6 +33,8 @@ public class FacultyListCommand implements Command {
         request.setAttribute("currentPage", start);
         request.setAttribute("total", total);
         request.setAttribute("faculties" , faculties);
+        request.setAttribute("sortBy" , sortBy);
+        request.setAttribute("order" , order);
         return "/facultyList.jsp";
     }
 }

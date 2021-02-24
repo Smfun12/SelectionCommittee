@@ -1,5 +1,8 @@
 package com.servlet.model.entity;
 
+import com.servlet.model.entity.enums.Roles;
+
+import javax.management.relation.Role;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,6 +89,26 @@ public class Student {
         this.faculties = faculties;
     }
 
+    public boolean isInSearch() {
+        return inSearch;
+    }
+
+    public void setInSearch(boolean inSearch) {
+        this.inSearch = inSearch;
+    }
+
+    private boolean inSearch = true;
+
+    public Roles getRoles() {
+       return roles;
+    }
+
+    public void setRoles(Roles roles) {
+        this.roles = roles;
+    }
+
+    private Roles roles;
+
     public Student(){
 
     }
@@ -94,7 +117,8 @@ public class Student {
         this.email = email;
     }
 
-    public Student(String login, String email, String password, String city, String district, String school) {
+    public Student(String login, String email, String password, String city, String district, String school,
+                   Roles roles, boolean inSearch) {
 
         this.login = login;
         this.email = email;
@@ -102,17 +126,23 @@ public class Student {
         this.city = city;
         this.district = district;
         this.school = school;
+        this.roles = roles;
+        this.inSearch = inSearch;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "login='" + login + '\'' +
+                "id=" + id +
+                ", login='" + login + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", city='" + city + '\'' +
                 ", district='" + district + '\'' +
                 ", school='" + school + '\'' +
+                ", faculties=" + faculties +
+                ", inSearch=" + inSearch +
+                ", role=" + roles +
                 '}';
     }
 }

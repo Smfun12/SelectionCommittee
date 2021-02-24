@@ -14,8 +14,8 @@ public class DeleteFacultyCommand implements Command{
 
     @Override
     public String execute(HttpServletRequest request){
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("facultyid"));
         facultyService.deleteFaculty(id);
-        return "/facultyList.jsp";
+        return "/WEB-INF/admin/adminbasis.jsp";
     }
 }

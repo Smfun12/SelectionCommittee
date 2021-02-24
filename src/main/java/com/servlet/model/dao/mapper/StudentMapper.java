@@ -2,6 +2,7 @@ package com.servlet.model.dao.mapper;
 
 
 import com.servlet.model.entity.Student;
+import com.servlet.model.entity.enums.Roles;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,6 +21,8 @@ public class StudentMapper implements ObjectMapper<Student> {
         student.setCity(rs.getString("city"));
         student.setDistrict(rs.getString("district"));
         student.setSchool(rs.getString("school"));
+        student.setRoles( Roles.valueOf(rs.getString("role")));
+        student.setInSearch(rs.getBoolean("inSearch"));
         return student;
     }
 

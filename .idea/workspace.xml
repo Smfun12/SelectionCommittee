@@ -9,79 +9,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a2c0b43-b861-4736-a3c0-4c0ff47bbc68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/enums/Roles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/applyOnFaculty.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/userProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3087c753-86f7-4358-b1a7-bd785aa04e71.xml" beforeDir="false" />
+    <list default="true" id="4a2c0b43-b861-4736-a3c0-4c0ff47bbc68" name="Default" comment="add applyOnFacultyPage">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ReturnHomeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentsOnFacultyCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/SubmitFacultyCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/error.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/catalina.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/catalina.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/ciphers.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/ciphers.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/configtest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/configtest.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/daemon.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/daemon.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/digest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/digest.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/setclasspath.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/setclasspath.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/shutdown.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/shutdown.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/startup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tcnative-1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tcnative-1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tomcat8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tomcat8.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tool-wrapper.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/tool-wrapper.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/version.sh" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/bin/version.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/Exception.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/FacultyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/FacultyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/ConnectionPoolHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/ConnectionPoolHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/StudentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/applyOnFaculty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/applyOnFaculty.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facultyList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/AddStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/AddStudentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentPageCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentPageCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/FacultyListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/FacultyListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/LogOut.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/StudentListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/command/StudentListCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/filters/EncodingFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/filters/EncodingFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/FacultyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/FacultyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/GenericDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/StudentDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/StudentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/service/FacultyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/service/FacultyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/model/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/servlets/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/servlets/MainServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/AddStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/AddStudentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/EditStudentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/EditStudentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/EditStudentPageCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/EditStudentPageCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/FacultyListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/FacultyListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/LogOut.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/StudentListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/StudentListCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/filters/EncodingFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/filters/EncodingFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/FacultyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/FacultyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/GenericDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/StudentDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/FacultyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/FacultyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/servlets/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/servlets/MainServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/facultyList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentEdit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +127,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -205,8 +210,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenProjectNavigator">
@@ -404,12 +409,14 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -420,6 +427,7 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.servlet.command" />
+      <recent name="com.servlet.servlets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp" />
@@ -594,7 +602,21 @@
       <workItem from="1613679015945" duration="13733000" />
       <workItem from="1613950065139" duration="3825000" />
       <workItem from="1614012946664" duration="4205000" />
+      <workItem from="1614031166640" duration="146000" />
+      <workItem from="1614035538625" duration="6824000" />
+      <workItem from="1614072834712" duration="4482000" />
+      <workItem from="1614085861003" duration="3227000" />
+      <workItem from="1614120603087" duration="3824000" />
+      <workItem from="1614149260847" duration="8879000" />
     </task>
+    <task id="LOCAL-00001" summary="add applyOnFacultyPage">
+      <created>1614031284015</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614031284015</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -693,13 +715,27 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add applyOnFacultyPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="add applyOnFacultyPage" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="69" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/SubmitFacultyCommand.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

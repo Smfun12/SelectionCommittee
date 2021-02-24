@@ -14,8 +14,7 @@ public class SessionListener implements HttpSessionListener {
     @Override
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent) {
         HashSet<String> loggedUsers = (HashSet<String>) httpSessionEvent
-                .getSession().getServletContext()
-                .getAttribute("loggedUsers");
+                .getSession().getAttribute("loggedUsers");
         String userName = (String) httpSessionEvent.getSession()
                 .getAttribute("userName");
         loggedUsers.remove(userName);

@@ -1,7 +1,6 @@
 package com.servlet.servlets;
 
 import com.servlet.command.*;
-import com.servlet.command.Exception;
 import com.servlet.model.service.FacultyService;
 import com.servlet.model.service.StudentService;
 
@@ -20,7 +19,6 @@ public class MainServlet extends HttpServlet {
         commands.put("logout", new LogOut());
         commands.put("login", new Login());
         commands.put("registration", new Registration());
-        commands.put("exception" , new Exception());
         commands.put("studentList", new StudentListCommand(new StudentService()));
         commands.put("facultyList", new FacultyListCommand(new FacultyService()));
         commands.put("addStudent", new AddStudentCommand(new StudentService()));
@@ -32,7 +30,11 @@ public class MainServlet extends HttpServlet {
         commands.put("showEditFacultyPage", new EditFacultyPageCommand(new FacultyService()));
         commands.put("editFaculty", new EditFacultyCommand(new FacultyService()));
         commands.put("deleteFaculty", new DeleteFacultyCommand(new FacultyService()));
-        commands.put("applyOnFaculty",new ApplyOnFacultyCommand(new StudentService(), new FacultyService()));
+        commands.put("applyOnFaculty",new ApplyOnFacultyPageCommand(new StudentService(), new FacultyService()));
+        commands.put("applyStudentOnFaculty",new ApplyOnFacultyCommand(new StudentService(), new FacultyService()));
+        commands.put("showStudentsOnFaculty",new StudentsOnFacultyCommand(new StudentService(), new FacultyService()));
+        commands.put("submitFaculty",new SubmitFacultyCommand(new StudentService(), new FacultyService()));
+        commands.put("home", new ReturnHomeCommand(new StudentService()));
         System.out.println("***************************INIT***************************");
     }
 

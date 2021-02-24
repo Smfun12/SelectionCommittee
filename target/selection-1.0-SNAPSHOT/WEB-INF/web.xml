@@ -44,6 +44,7 @@
     </filter-mapping>
 
     <listener>
+        <description>sessionListener</description>
         <listener-class>
             com.servlet.listener.SessionListener
         </listener-class>
@@ -53,21 +54,4 @@
         <exception-type>java.lang.Exception</exception-type>
         <location>/WEB-INF/error.jsp</location>
     </error-page>
-
-    <mime-mapping>
-        <extension>js</extension>
-        <mime-type>application/javascript</mime-type>
-    </mime-mapping>
-    <mime-mapping>
-        <extension>css</extension>
-        <mime-type>text/css</mime-type>
-    </mime-mapping>
-    <mime-mapping>
-        <extension>jpg</extension>
-        <mime-type>image/jpeg</mime-type>
-    </mime-mapping>
-    <mime-mapping>
-        <extension>png</extension>
-        <mime-type>image/png</mime-type>
-    </mime-mapping>
 </web-app>

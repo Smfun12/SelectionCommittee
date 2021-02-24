@@ -19,9 +19,9 @@ public class JDBCStudentDao implements StudentDao {
     }
 
     @Override
-    public void create(Student entity) {
-        final String query ="INSERT INTO students (login,email,password,city,district,school) VALUES(?,?,?,?,?,?)";
-        try {
+    public void create(Student entity) throws SQLException{
+        final String query ="INSERT INTO students (login,email,password,city,district,school,inSearch,role)" +
+                " VALUES(?,?,?,?,?,?,?,?)";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1,entity.getLogin());
             statement.setString(2,entity.getEmail());
@@ -29,49 +29,33 @@ public class JDBCStudentDao implements StudentDao {
             statement.setString(4,entity.getCity());
             statement.setString(5,entity.getDistrict());
             statement.setString(6,entity.getSchool());
+            statement.setBoolean(7,entity.isInSearch());
+            statement.setString(8,entity.getRoles().name());
             statement.execute();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
 
     }
 
     @Override
-    public Student findById(int id) {
+    public Optional<Student> findById(int id) throws SQLException{
         final String query ="select * from students where studentid=?";
         StudentMapper studentMapper = new StudentMapper();
 
-        try {
-            Student student = null;
+            Optional<Student> student = Optional.empty();
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1,id);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-            student = studentMapper.extractFromResultSet(resultSet);
+            student = Optional.ofNullable(studentMapper.extractFromResultSet(resultSet));
             }
-            if (student != null)
-                return student;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        finally {
-            try {
-                connection.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
-        return null;
-
+        return student;
     }
 
 
     @Override
-    public Optional<Student> findByLogin(String login) {
+    public Optional<Student> findByLogin(String login)throws SQLException {
         final String query ="select * from students where login=?";
         StudentMapper studentMapper = new StudentMapper();
 
-        try {
             Optional<Student> student = Optional.empty();
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1,login);
@@ -79,37 +63,46 @@ public class JDBCStudentDao implements StudentDao {
             while(resultSet.next()){
                 student = Optional.ofNullable(studentMapper.extractFromResultSet(resultSet));
             }
-            if (student.isPresent())
-                return student;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        finally {
-            try {
-                connection.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
-        return Optional.empty();
+        return student;
     }
 
     @Override
-    public List<Student> findAll(int start, int total) {
+    public void setOneFaculty(int studentid, int facultyid) {
+        final String query ="DELETE FROM student_faculties WHERE studentid=?";
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, studentid);
+            statement.execute();
+            statement = connection.prepareStatement("INSERT INTO student_faculties set studentid=?,facultyid=?");
+            statement.setInt(1, studentid);
+            statement.setInt(2, facultyid);
+            statement.execute();
+        }catch (SQLException s){
+            s.printStackTrace();
+        }
+    }
+
+    @Override
+    public List<Student> findAll(int start, int total,String sortBy, String order) {
         Map<Integer, Student> students = new HashMap<>();
 
-        final String query ="select * from students limit " + (start-1)+"," + total;
+        final String query ="select * from students "+ " ORDER BY "+ sortBy +" " + order +
+                " LIMIT " + (start-1)+"," + total;
         try (Statement st = connection.createStatement()) {
             ResultSet rs = st.executeQuery(query);
 
             StudentMapper studentMapper = new StudentMapper();
-
+            List<Student> list = new ArrayList<>();
             while (rs.next()) {
                 Student student = studentMapper
                         .extractFromResultSet(rs);
                 studentMapper.makeUnique(students, student);
+                list.add(student);
             }
-            return new ArrayList<>(students.values());
+            if (order.equals("desc")){
+                Collections.reverse(list);
+            }
+            return list;
         } catch (SQLException e) {
             e.printStackTrace();
 
@@ -156,10 +149,9 @@ public class JDBCStudentDao implements StudentDao {
 
 
     @Override
-    public void update(Student entity) {
+    public void update(Student entity) throws SQLException{
         final String query ="UPDATE students set login=?,email=?,password=?,city=?" +
-                ",district=?,school=? where studentid=?";
-        try {
+                ",district=?,school=?,role=?,inSearch=? where studentid=?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1,entity.getLogin());
             statement.setString(2,entity.getEmail());
@@ -167,18 +159,10 @@ public class JDBCStudentDao implements StudentDao {
             statement.setString(4,entity.getCity());
             statement.setString(5,entity.getDistrict());
             statement.setString(6,entity.getSchool());
-            statement.setInt(7,entity.getId());
+            statement.setBoolean(7,entity.isInSearch());
+            statement.setString(8,entity.getRoles().name());
+            statement.setInt(9,entity.getId());
             statement.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        finally {
-            try {
-                connection.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
     }
 
     @Override
@@ -196,4 +180,44 @@ public class JDBCStudentDao implements StudentDao {
         }
     }
 
+    @Override
+    public void addFaculty(Student student,Faculty faculty) {
+        final String query ="INSERT INTO student_faculties set studentid=?,facultyid=?";
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, student.getId());
+            statement.setInt(2, faculty.getFacultyid());
+            statement.execute();
+        }catch (SQLException s){
+            s.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public List<Faculty> getAllFaculties(int id) {
+        final String query ="SELECT facultyid FROM student_faculties WHERE studentid=?";
+        FacultyMapper facultyMapper = new FacultyMapper();
+        List<Faculty> faculties = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                final String selectFaculties = "select * from faculties where facultyid=?";
+                statement = connection.prepareStatement(selectFaculties);
+                statement.setInt(1,resultSet.getInt("facultyid"));
+                ResultSet resultSet1 = statement.executeQuery();
+                while(resultSet1.next()){
+                    faculties.add(facultyMapper.extractFromResultSet(resultSet1));
+                }
+
+            }
+            return faculties;
+        }catch (SQLException s){
+            s.printStackTrace();
+            return null;
+        }
+
+    }
 }

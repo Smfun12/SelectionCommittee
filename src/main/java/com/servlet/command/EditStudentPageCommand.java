@@ -4,6 +4,8 @@ import com.servlet.model.entity.Student;
 import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
+import java.util.Optional;
 
 public class EditStudentPageCommand implements Command{
     private StudentService studentService;
@@ -15,14 +17,20 @@ public class EditStudentPageCommand implements Command{
     @Override
     public String execute(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("id"));
-        Student student = studentService.findById(id);
-        request.setAttribute("id",student.getId());
-        request.setAttribute("login",student.getLogin());
-        request.setAttribute("email",student.getEmail());
-        request.setAttribute("password",student.getPassword());
-        request.setAttribute("city",student.getCity());
-        request.setAttribute("district",student.getDistrict());
-        request.setAttribute("school",student.getSchool());
+        Optional<Student> student;
+        try {
+            student = studentService.findById(id);
+        } catch (SQLException e) {
+            request.setAttribute("exception","Student exist");
+            return "/WEB-INF/error.jsp";
+        }
+        request.setAttribute("id",student.get().getId());
+        request.setAttribute("login",student.get().getLogin());
+        request.setAttribute("email",student.get().getEmail());
+        request.setAttribute("password",student.get().getPassword());
+        request.setAttribute("city",student.get().getCity());
+        request.setAttribute("district",student.get().getDistrict());
+        request.setAttribute("school",student.get().getSchool());
         return "/studentEdit.jsp";
     }
 }

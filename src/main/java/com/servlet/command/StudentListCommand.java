@@ -15,13 +15,19 @@ public class StudentListCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
+        System.out.println(request.getSession().getAttribute("login"));
+        if (!request.getSession().getAttribute("login").equals("admin")){
+            return "/login.jsp";
+        }
         int start = Integer.parseInt(request.getParameter("currentPage"));
         int total = Integer.parseInt(request.getParameter("recordsPerPage"));
+        String sortBy = request.getParameter("sortBy");
+        String order = request.getParameter("order");
         if (start > 1){
             start--;
             start = start*total+1;
         }
-        List<Student> students = studentService.getAllStudents(start,total);
+        List<Student> students = studentService.getAllStudents(start,total,sortBy,order);
         int nOfPages = students.size() / total;
 
         if (nOfPages % total > 0) {

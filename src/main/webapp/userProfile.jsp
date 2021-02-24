@@ -62,7 +62,7 @@
                 </div>
                 <div class="card mt-3">
                     <tr  each="faculty : ${student.faculties}">
-                        <td><span  text="${faculty.title}"></span></td>
+                        <td><span>${faculty.title}</span></td>
                     </tr>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                                 <h6 class="mb-0">1st Mark</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <p  text="${firstGrade}">
+                                <p>${firstGrade}</p>
                             </div>
                         </div>
                         <hr>
@@ -101,7 +101,7 @@
                                 <h6 class="mb-0">2nd Mark</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <p  text="${secondGrade}">
+                                <p >${secondGrade}</p>
                             </div>
                         </div>
                         <hr>

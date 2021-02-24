@@ -3,6 +3,7 @@ package com.servlet.model.service;
 
 import com.servlet.model.dao.DaoFactory;
 import com.servlet.model.dao.StudentDao;
+import com.servlet.model.entity.Faculty;
 import com.servlet.model.entity.Student;
 
 import java.sql.SQLException;
@@ -13,24 +14,24 @@ public class StudentService {
 
     DaoFactory daoFactory = DaoFactory.getInstance();
 
-    public List<Student> getAllStudents(){
+    public List<Faculty> getAllFaculties(int id){
         try (StudentDao dao = daoFactory.createStudentDao()) {
-            return dao.findAll();
+            return dao.getAllFaculties(id);
         }
     }
 
-    public List<Student> getAllStudents(int start, int total){
+    public List<Student> getAllStudents(int start, int total,String sortBy, String order){
         try (StudentDao dao = daoFactory.createStudentDao()) {
-            return dao.findAll(start,total);
+            return dao.findAll(start,total,sortBy,order);
         }
     }
-    public void createStudent(Student student){
+    public void createStudent(Student student) throws SQLException {
         try (StudentDao dao = daoFactory.createStudentDao()) {
             dao.create(student);
         }
     }
 
-    public Student findById(int id){
+    public Optional<Student> findById(int id) throws SQLException {
         try (StudentDao dao = daoFactory.createStudentDao()) {
             return dao.findById(id);
         }
@@ -48,9 +49,21 @@ public class StudentService {
         }
     }
 
-    public Optional<Student> findByLogin(String login) {
+    public Optional<Student> findByLogin(String login) throws SQLException {
         try (StudentDao dao = daoFactory.createStudentDao()) {
             return dao.findByLogin(login);
+        }
+    }
+
+    public void addFaculty(Student student, Faculty faculty) {
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            dao.addFaculty(student,faculty);
+        }
+    }
+
+    public void setOneFaculty(int studentid, int facultyid) {
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            dao.setOneFaculty(studentid,facultyid);
         }
     }
 }

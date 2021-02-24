@@ -27,9 +27,9 @@ public class EditStudentCommand implements Command{
         try {
             studentService.updateStudent(student);
         } catch (SQLException e) {
-            request.setAttribute("exception",e.getMessage());
+            request.setAttribute("exception","Student exist");
             return "/WEB-INF/error.jsp";
         }
-        return "/app/studentList.jsp";
+        return "/WEB-INF/admin/adminbasis.jsp";
     }
 }

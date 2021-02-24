@@ -7,17 +7,23 @@
 
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Error Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\static\error.css"/>
+    <title>Error page</title>
 </head>
-    <body>
+<body>
+<div class="mainbox">
+    <div class="err">4</div>
+    <i class="far fa-question-circle fa-spin"></i>
+    <div class="err2">4</div>
+    <div class="msg">
         <h2>
-           Error Page<br/>
+            Error Page<br/>
             <i>Error ${exception}</i>
         </h2>
-    <br>
-        <a href="${pageContext.request.contextPath}/app/index.jsp">Index</a>
-
-
+        <a href="${pageContext.request.contextPath}/app/index.jsp">Home</a>
+    </div>
+</div>
     </body>
 </html>

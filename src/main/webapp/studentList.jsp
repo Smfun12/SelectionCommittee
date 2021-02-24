@@ -5,29 +5,35 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:setLocale value="${param.lang}" />
-<fmt:setBundle basename="message" />
+<fmt:setLocale value="${param.lang}"/>
+<fmt:setBundle basename="message"/>
 <html lang="${param.lang}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Student List</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default navbar-fixed-top">
-    <a class="navbar-brand"  href="${pageContext.request.contextPath}" ><span><fmt:message key="nav"/></span></a>
+    <a class="navbar-brand" href="${pageContext.request.contextPath}"><span><fmt:message key="nav"/></span></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5"><span><fmt:message key="faculties"/></span></a>
+                <a class="nav-link"
+                   href="${pageContext.request.contextPath}/app/facultyList?currentPage=1&recordsPerPage=5&sortBy=facultyid&order=asc"><span><fmt:message
+                        key="faculties"/></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="${pageContext.request.contextPath}/app/studentList?currentPage=1&recordsPerPage=5"><span><fmt:message key="students"/></span></a>
+                <a class="nav-link"
+                   href="${pageContext.request.contextPath}/app/studentList?currentPage=1&recordsPerPage=5&sortBy=studentid&order=asc"><span><fmt:message
+                        key="students"/></span></a>
             </li>
         </ul>
     </div>
@@ -45,29 +51,47 @@
     <thead>
     <tr>
         <th scope="col">
-                #
+            #
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=studentid&order=desc">↓</a>
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=studentid&order=asc">↑</a>
+
         </th>
         <th scope="col">
-                Login
+            Login
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=login&order=desc">↓</a>
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=login&order=asc">↑</a>
+
         </th>
         <th scope="col">
-                Email
+            Email
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=email&order=desc">↓</a>
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=email&order=asc">↑</a>
+
         </th>
         <th scope="col">
-                City
+            City
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=city&order=desc">↓</a>
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=city&order=asc">↑</a>
+
         </th>
         <th scope="col">
-                District
+            District
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=district&order=desc">↓</a>
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=district&order=asc">↑</a>
+
         </th>
         <th scope="col">
-                School
+            School
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=school&order=desc">↓</a>
+            <a href="${pageContext.request.contextPath}/app/studentList?currentPage=${currentPage}&recordsPerPage=${total}&sortBy=school&order=asc">↑</a>
+
         </th>
         <th scope="col">Role</th>
         <th scope="col">Actions</th>
     </tr>
     </thead>
     <tbody>
-        <c:forEach var="student" items="${students}">
+    <c:forEach var="student" items="${students}">
     <tr>
         <th scope="row"><span>${student.id}</span></th>
         <td>${student.login}</td>
@@ -77,14 +101,10 @@
         <td>${student.school}</td>
         <td></td>
         <td>
-            <form action="${pageContext.request.contextPath}/app/showEditStudentPage" method="get">
-                        <input type="hidden" name="id" value="${student.id}"/>
-                        <button class="btn btn-info"> <fmt:message key="update"/></button>
-            </form>
-            <form action="${pageContext.request.contextPath}/app/deleteStudent" method="get">
-                <input type="hidden" name="id" value="${student.id}"/>
-                <button class="btn btn-danger"><fmt:message key="delete"/></button>
-            </form>
+            <a href="${pageContext.request.contextPath}/app/showEditStudentPage?id=${student.id}"
+               class="btn btn-info"> <fmt:message key="update"/></a>
+            <a href="${pageContext.request.contextPath}/app/deleteStudent?id=${student.id}"
+            class="btn btn-info"> <fmt:message key="delete"/></a>
         </td>
         </c:forEach>
     </tr>
@@ -122,8 +142,14 @@
         </c:if>
     </ul>
 </nav>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

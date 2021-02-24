@@ -6,6 +6,7 @@ import com.servlet.model.service.FacultyService;
 import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 
 public class AddFacultyCommand implements Command{
     private FacultyService facultyService;
@@ -24,7 +25,12 @@ public class AddFacultyCommand implements Command{
         faculty.setFirstSubject(request.getParameter("firstSubject"));
         faculty.setSecondSubject(request.getParameter("secondSubject"));
         faculty.setThirdSubject(request.getParameter("thirdSubject"));
-        facultyService.createFaculty(faculty);
+        try {
+            facultyService.createFaculty(faculty);
+        } catch (SQLException e) {
+            request.setAttribute("exception","Faculty exist");
+            return "/WEB-INF/error.jsp";
+        }
         return "/index.jsp";
     }
 }

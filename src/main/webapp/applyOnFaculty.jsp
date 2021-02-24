@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${param.lang}" />
+<fmt:setBundle basename="message" />
+<html lang="${param.lang}">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,39 +11,39 @@
 <body>
 <div class="container">
 
-    <form action="#" action="@{/applyForFaculty/{facultyid}(facultyid=${faculty.facultyid})}"
-          method="POST">
+    <form action="${pageContext.request.contextPath}/app/applyStudentOnFaculty"
+          method="post">
 
         <!-- Add hidden form field to handle update -->
-        <input type="hidden" />
+        <input type="hidden" name="facultyid" value="${facultyid}"/>
 
         <label for="title">Title</label>
-        <input type="text" id="title" class="form-control mb-4 col-4" required>
+        <input type="text" id="title" value="${title}" class="form-control mb-4 col-4" disabled required>
 
         <label for="totalPlaces">Total places</label>
-        <input type="text" id="totalPlaces" class="form-control mb-4 col-4" required>
+        <input type="text" id="totalPlaces" value="${totalPlaces}" class="form-control mb-4 col-4" disabled required>
 
         <label for="title">Budget Places</label>
+        <input type="text" value="${budgetPlaces}" class="form-control mb-4 col-4" disabled required>
+
+        <label for="title">Contract Places</label>
+        <input type="text"  value="${contractPlaces}" class="form-control mb-4 col-4" disabled required>
+
+        <label for="title" >${firstSubject}</label>
+        <input type="text"  class="form-control mb-4 col-4" required>
+
+        <label for="title" >${secondSubject}</label>
+        <input type="text"  class="form-control mb-4 col-4" required>
+
+        <label for="title" >${thirdSubject}</label>
         <input type="text" class="form-control mb-4 col-4" required>
 
-        <label for="title">Title</label>
-        <input type="text"  class="form-control mb-4 col-4" required>
-
-        <label for="title" ></label>
-        <input type="text"  class="form-control mb-4 col-4" required>
-
-        <label for="title" ></label>
-        <input type="text"  class="form-control mb-4 col-4" required>
-
-        <label for="title" ></label>
-        <input type="text" class="form-control mb-4 col-4" required>
-
-        <button type="submit" class="btn btn-info col-2"></button>
+        <button type="submit" class="btn btn-info col-2">
+            <fmt:message key="apply"/>
+        </button>
     </form>
 
     <hr>
-
-    <a href = "@{/findFaculty}"></a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
