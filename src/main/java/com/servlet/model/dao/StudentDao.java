@@ -9,10 +9,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface StudentDao extends GenericDao<Student> {
-    void addFaculty(Student student, Faculty faculty);
+    void addFaculty(Student student, Faculty faculty) throws SQLException;
+
     List<Faculty> getAllFaculties(int id);
     Optional<Student> findByLogin(String login) throws SQLException;
 
+    boolean checkIfApplied(Student student, Faculty faculty) throws SQLException;
 
     void setOneFaculty(int studentid, int facultyid);
 }

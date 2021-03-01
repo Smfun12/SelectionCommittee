@@ -1,12 +1,16 @@
+<!DOCTYPE html>
+
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:setLocale value="${param.lang}" />
-<fmt:setBundle basename="message" />
-<html lang="${param.lang}">
+<%@ page session="true" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
+<fmt:setBundle basename="message"/>
+<html lang="${sessionScope.lang}">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
@@ -27,16 +31,16 @@
         <input type="text" value="${budgetPlaces}" class="form-control mb-4 col-4" disabled required>
 
         <label for="title">Contract Places</label>
-        <input type="text"  value="${contractPlaces}" class="form-control mb-4 col-4" disabled required>
+        <input type="text" value="${contractPlaces}" class="form-control mb-4 col-4" disabled required>
 
         <label for="title" >${firstSubject}</label>
-        <input type="text"  class="form-control mb-4 col-4" required>
+        <input type="text" name="firstGrade" class="form-control mb-4 col-4" required>
 
-        <label for="title" >${secondSubject}</label>
-        <input type="text"  class="form-control mb-4 col-4" required>
+        <label for="title">${secondSubject}</label>
+        <input type="text" name="secondGrade" class="form-control mb-4 col-4" required>
 
-        <label for="title" >${thirdSubject}</label>
-        <input type="text" class="form-control mb-4 col-4" required>
+        <label for="title">${thirdSubject}</label>
+        <input type="text" name="thirdGrade" class="form-control mb-4 col-4" required>
 
         <button type="submit" class="btn btn-info col-2">
             <fmt:message key="apply"/>

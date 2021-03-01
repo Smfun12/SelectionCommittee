@@ -11,7 +11,10 @@
     </resource-ref>
 
 
-
+    <context-param>
+        <param-name>log4j-config-location</param-name>
+        <param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>com.servlet.servlets.MainServlet</servlet-class>
@@ -48,6 +51,10 @@
         <listener-class>
             com.servlet.listener.SessionListener
         </listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.servlet.listener.ContextListener</listener-class>
     </listener>
 
     <error-page>

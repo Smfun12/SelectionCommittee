@@ -8,16 +8,16 @@
 </head>
 <body>
 
-        <h1>Вход в систему</h1><br/>
-        <form method="get" action="${pageContext.request.contextPath}/app/login">
+<h1>Вход в систему</h1><br/>
+<form method="get" action="${pageContext.request.contextPath}/app/login">
 
-            <input type="text" name="name"><br/>
-            <input type="password" name="pass"><br/><br/>
-            <input class="button" type="submit" value="Войти">
+    <input type="text" name="name"><br/>
+    <input type="password" name="pass"><br/><br/>
+    <input class="button" type="submit" value="Войти">
 
-        </form>
-        <br/>
-        <a href="${pageContext.request.contextPath}/app/logout">На головну</a>
-
+</form>
+<br/>
+<span style="color: red; font-size: 20px;">${error}</span>
+<a href="${pageContext.request.contextPath}/app/logout">На головну</a>
 </body>
 </html>

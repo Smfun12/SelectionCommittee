@@ -23,8 +23,12 @@ public class ApplyOnFacultyPageCommand implements Command{
         String user = (String) request.getSession().getAttribute("login");
         try {
             Optional<Student> student = studentService.findByLogin(user);
-            if (!student.get().isInSearch()){
-                request.setAttribute("exception","You are already applied");
+            if (!student.get().isInSearch()) {
+                request.setAttribute("exception", "You are already applied");
+                return "/WEB-INF/error.jsp";
+            }
+            if (studentService.checkIfApplied(student.get(), facultyService.findById(facultyId).get())) {
+                request.setAttribute("exception", "You are already applied on that faculty");
                 return "/WEB-INF/error.jsp";
             }
         } catch (SQLException e) {
@@ -34,14 +38,15 @@ public class ApplyOnFacultyPageCommand implements Command{
             Optional<Faculty> faculty = facultyService.findById(facultyId);
             request.setAttribute("facultyid",faculty.get().getFacultyid());
             request.setAttribute("title",faculty.get().getTitle());
-            request.setAttribute("totalPlaces",faculty.get().getTotalPlaces());
-            request.setAttribute("budgetPLaces",faculty.get().getBudgetPlaces());
-            request.setAttribute("contractPlaces",faculty.get().getContractPlaces());
+            request.setAttribute("totalPlaces", faculty.get().getTotalPlaces());
+            request.setAttribute("budgetPlaces", faculty.get().getBudgetPlaces());
+            request.setAttribute("contractPlaces", faculty.get().getContractPlaces());
             request.setAttribute("firstSubject",faculty.get().getFirstSubject());
             request.setAttribute("secondSubject",faculty.get().getSecondSubject());
             request.setAttribute("thirdSubject",faculty.get().getThirdSubject());
         } catch (SQLException e) {
-            e.printStackTrace();
+            request.setAttribute("exception", "You are already applied on that faculty");
+            return "/WEB-INF/error.jsp";
         }
         return "/applyOnFaculty.jsp";
     }

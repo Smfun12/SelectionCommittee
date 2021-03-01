@@ -8,7 +8,6 @@ import com.servlet.model.entity.Student;
 
 import java.sql.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class JDBCFacultyDao implements FacultyDao {
     private Connection connection;
@@ -69,9 +68,6 @@ public class JDBCFacultyDao implements FacultyDao {
                 facultyMapper.makeUnique(facultyMap, faculty);
                 list.add(faculty);
             }
-            if (order.equals("desc")){
-                Collections.reverse(list);
-            }
             return list;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -81,6 +77,29 @@ public class JDBCFacultyDao implements FacultyDao {
 
     @Override
     public List<Faculty> findAll() {
+        Map<Integer, Faculty> faculties = new HashMap<>();
+
+        final String query = "select * from faculties";
+        try (Statement st = connection.createStatement()) {
+            ResultSet rs = st.executeQuery(query);
+
+            FacultyMapper facultyMapper = new FacultyMapper();
+
+            while (rs.next()) {
+                Faculty faculty = facultyMapper
+                        .extractFromResultSet(rs);
+                facultyMapper.makeUnique(faculties, faculty);
+            }
+            return new ArrayList<>(faculties.values());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
         return null;
     }
 
@@ -126,24 +145,20 @@ public class JDBCFacultyDao implements FacultyDao {
     }
 
     @Override
-    public List<Student> getAllStudents(int id)
-    {
-        final String query ="SELECT studentid FROM student_faculties WHERE facultyid=?";
+    public List<Student> getAllStudents(int id) {
+        final String query = "" +
+                "select studentid,login,email,password,city,district,school,role,inSearch,onBudget" +
+                " from faculties \n" +
+                "left join student_faculties using (facultyid)\n" +
+                "left join students using (studentid) where facultyid=? and studentid is not null";
         StudentMapper studentMapper = new StudentMapper();
         List<Student> students = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
-            while(resultSet.next()){
-                final String selectFaculties = "select * from students where studentid=?";
-                statement = connection.prepareStatement(selectFaculties);
-                statement.setInt(1,resultSet.getInt("studentid"));
-                ResultSet resultSet1 = statement.executeQuery();
-                while(resultSet1.next()){
-                    students.add(studentMapper.extractFromResultSet(resultSet1));
-                }
-
+            while (resultSet.next()) {
+                students.add(studentMapper.extractFromResultSet(resultSet));
             }
             return students;
         }catch (SQLException s){

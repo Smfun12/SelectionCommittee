@@ -20,6 +20,12 @@ public class FacultyService {
         }
     }
 
+    public List<Faculty> getFaculties() {
+        try (FacultyDao dao = daoFactory.createFacultyDao()) {
+            return dao.findAll();
+        }
+    }
+
     public void createFaculty(Faculty faculty) throws SQLException {
         try (FacultyDao dao = daoFactory.createFacultyDao()) {
             dao.create(faculty);
@@ -46,7 +52,7 @@ public class FacultyService {
 
     public List<Student> getAllStudents(int id) {
         try (FacultyDao dao = daoFactory.createFacultyDao()) {
-          return dao.getAllStudents(id);
+            return dao.getAllStudents(id);
         }
     }
 }

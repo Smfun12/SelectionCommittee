@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 public class EditStudentPageCommand implements Command{
-    private StudentService studentService;
+    private final StudentService studentService;
 
     public EditStudentPageCommand(StudentService studentService) {
         this.studentService = studentService;

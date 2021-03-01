@@ -1,12 +1,11 @@
 package com.servlet.command;
 
 import com.servlet.model.service.FacultyService;
-import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class DeleteFacultyCommand implements Command{
-    private FacultyService facultyService;
+    private final FacultyService facultyService;
 
     public DeleteFacultyCommand(FacultyService facultyService) {
         this.facultyService = facultyService;

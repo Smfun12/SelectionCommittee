@@ -13,9 +13,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainServlet extends HttpServlet {
-    private Map<String, Command> commands = new HashMap<>();
+    private final Map<String, Command> commands = new HashMap<>();
+    private final Map<String, PdfCommand> pdfCommandMap = new HashMap<>();
 
-    public void init(){
+    public void init() {
         commands.put("logout", new LogOut());
         commands.put("login", new Login());
         commands.put("registration", new Registration());
@@ -30,11 +31,17 @@ public class MainServlet extends HttpServlet {
         commands.put("showEditFacultyPage", new EditFacultyPageCommand(new FacultyService()));
         commands.put("editFaculty", new EditFacultyCommand(new FacultyService()));
         commands.put("deleteFaculty", new DeleteFacultyCommand(new FacultyService()));
-        commands.put("applyOnFaculty",new ApplyOnFacultyPageCommand(new StudentService(), new FacultyService()));
-        commands.put("applyStudentOnFaculty",new ApplyOnFacultyCommand(new StudentService(), new FacultyService()));
-        commands.put("showStudentsOnFaculty",new StudentsOnFacultyCommand(new StudentService(), new FacultyService()));
-        commands.put("submitFaculty",new SubmitFacultyCommand(new StudentService(), new FacultyService()));
+        commands.put("applyOnFaculty", new ApplyOnFacultyPageCommand(new StudentService(), new FacultyService()));
+        commands.put("applyStudentOnFaculty", new ApplyOnFacultyCommand(new StudentService(), new FacultyService()));
+        commands.put("showStudentsOnFaculty", new StudentsOnFacultyCommand(new FacultyService()));
+        commands.put("submitFaculty", new SubmitFacultyCommand(new StudentService()));
+        commands.put("enableStudent", new EnableStudentCommand(new StudentService()));
+        commands.put("disableStudent", new DisableStudentCommand(new StudentService()));
+        commands.put("userProfile", new UserProfilePageCommand(new StudentService()));
         commands.put("home", new ReturnHomeCommand(new StudentService()));
+        commands.put("finalize", new FinalizeResultCommand(new StudentService(), new FacultyService()));
+        pdfCommandMap.put("exportStudentsToPdf", new ExportStudentsToPdfCommand(new StudentService()));
+        pdfCommandMap.put("exportFacultiesToPdf", new ExportFacultiesToPdfCommand(new FacultyService()));
         System.out.println("***************************INIT***************************");
     }
 
@@ -57,15 +64,25 @@ public class MainServlet extends HttpServlet {
 
         String path = request.getRequestURI();
         System.out.println(path);
-        path = path.replaceAll(".*/app/" , "");
+        path = path.replaceAll(".*/app/", "");
         System.out.println(path);
-        Command command = commands.getOrDefault(path ,
-                (r)->"/index.jsp");
-        String page = command.execute(request);
-        if(page.contains("redirect:")){
-            response.sendRedirect(page.replace("redirect:", "/"));
-        }else {
-            request.getRequestDispatcher(page).forward(request, response);
+        if (path.contains("export")) {
+            PdfCommand pdfCommand = pdfCommandMap.getOrDefault(path, (req, res) -> "/index.jsp");
+            String page1 = pdfCommand.execute(request, response);
+            if (page1.contains("redirect:")) {
+                response.sendRedirect(page1.replace("redirect:", "/"));
+            } else {
+                request.getRequestDispatcher(page1).forward(request, response);
+            }
+        } else {
+            Command command = commands.getOrDefault(path,
+                    (r) -> "/index.jsp");
+            String page = command.execute(request);
+            if (page.contains("redirect:")) {
+                response.sendRedirect(page.replace("redirect:", "/"));
+            } else {
+                request.getRequestDispatcher(page).forward(request, response);
+            }
         }
     }
 }

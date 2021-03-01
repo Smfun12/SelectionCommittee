@@ -23,6 +23,7 @@ public class StudentMapper implements ObjectMapper<Student> {
         student.setSchool(rs.getString("school"));
         student.setRoles( Roles.valueOf(rs.getString("role")));
         student.setInSearch(rs.getBoolean("inSearch"));
+        student.setOnBudget(rs.getBoolean("onBudget"));
         return student;
     }
 

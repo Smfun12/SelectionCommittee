@@ -1,15 +1,13 @@
 package com.servlet.command;
 
 import com.servlet.model.entity.Faculty;
-import com.servlet.model.entity.Student;
 import com.servlet.model.service.FacultyService;
-import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 
 public class AddFacultyCommand implements Command{
-    private FacultyService facultyService;
+    private final FacultyService facultyService;
 
     public AddFacultyCommand(FacultyService facultyService) {
         this.facultyService = facultyService;

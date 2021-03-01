@@ -14,17 +14,24 @@ public class StudentService {
 
     DaoFactory daoFactory = DaoFactory.getInstance();
 
-    public List<Faculty> getAllFaculties(int id){
+    public List<Faculty> getAllFaculties(int id) {
         try (StudentDao dao = daoFactory.createStudentDao()) {
             return dao.getAllFaculties(id);
         }
     }
 
-    public List<Student> getAllStudents(int start, int total,String sortBy, String order){
+    public List<Student> getStudents() {
         try (StudentDao dao = daoFactory.createStudentDao()) {
-            return dao.findAll(start,total,sortBy,order);
+            return dao.findAll();
         }
     }
+
+    public List<Student> getAllStudents(int start, int total, String sortBy, String order) {
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            return dao.findAll(start, total, sortBy, order);
+        }
+    }
+
     public void createStudent(Student student) throws SQLException {
         try (StudentDao dao = daoFactory.createStudentDao()) {
             dao.create(student);
@@ -55,15 +62,21 @@ public class StudentService {
         }
     }
 
-    public void addFaculty(Student student, Faculty faculty) {
+    public void addFaculty(Student student, Faculty faculty) throws SQLException {
         try (StudentDao dao = daoFactory.createStudentDao()) {
-            dao.addFaculty(student,faculty);
+            dao.addFaculty(student, faculty);
         }
     }
 
     public void setOneFaculty(int studentid, int facultyid) {
         try (StudentDao dao = daoFactory.createStudentDao()) {
-            dao.setOneFaculty(studentid,facultyid);
+            dao.setOneFaculty(studentid, facultyid);
+        }
+    }
+
+    public boolean checkIfApplied(Student student, Faculty faculty) throws SQLException {
+        try (StudentDao dao = daoFactory.createStudentDao()) {
+            return dao.checkIfApplied(student, faculty);
         }
     }
 }

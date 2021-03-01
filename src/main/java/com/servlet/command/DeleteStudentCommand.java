@@ -5,7 +5,7 @@ import com.servlet.model.service.StudentService;
 import javax.servlet.http.HttpServletRequest;
 
 public class DeleteStudentCommand implements Command{
-    private StudentService studentService;
+    private final StudentService studentService;
 
     public DeleteStudentCommand(StudentService studentService) {
         this.studentService = studentService;

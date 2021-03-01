@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.Optional;
 
-public class SubmitFacultyCommand implements Command {
+public class DisableStudentCommand implements Command {
     private final StudentService studentService;
 
-    public SubmitFacultyCommand(StudentService studentService) {
+    public DisableStudentCommand(StudentService studentService) {
         this.studentService = studentService;
     }
 
     @Override
     public String execute(HttpServletRequest request) {
         String user = (String) request.getSession().getAttribute("login");
-        int facultyid = Integer.parseInt(request.getParameter("id"));
-        int studentid = Integer.parseInt(request.getParameter("studentid"));
-        studentService.setOneFaculty(studentid, facultyid);
+        int studentid = Integer.parseInt(request.getParameter("id"));
         try {
             Optional<Student> student = studentService.findById(studentid);
             student.get().setInSearch(false);
@@ -28,8 +26,8 @@ public class SubmitFacultyCommand implements Command {
             e.printStackTrace();
         }
 
-        if (user == null){
-            request.setAttribute("exception","User is not logged");
+        if (user == null) {
+            request.setAttribute("exception", "User is not logged");
             return "/WEB-INF/error.jsp";
         }
         if (user.equals("admin"))

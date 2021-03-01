@@ -3,7 +3,6 @@ package com.servlet.command;
 import com.servlet.model.entity.Faculty;
 import com.servlet.model.entity.Student;
 import com.servlet.model.service.FacultyService;
-import com.servlet.model.service.StudentService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
@@ -11,11 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class StudentsOnFacultyCommand implements Command {
-    private StudentService studentService;
-    private FacultyService facultyService;
+    private final FacultyService facultyService;
 
-    public StudentsOnFacultyCommand(StudentService studentService, FacultyService facultyService) {
-        this.studentService = studentService;
+    public StudentsOnFacultyCommand(FacultyService facultyService) {
         this.facultyService = facultyService;
     }
 

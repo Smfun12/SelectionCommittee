@@ -27,16 +27,21 @@ public class ApplyOnFacultyCommand implements Command{
             Optional<Faculty> faculty = facultyService.findById(facultyId);
             student = studentService.findByLogin(user);
             student.get().getFaculties().add(faculty.get());
-            studentService.addFaculty(student.get(),faculty.get());
+            student.get().setFirstGrade(Integer.parseInt(request.getParameter("firstGrade")));
+            student.get().setSecondGrade(Integer.parseInt(request.getParameter("secondGrade")));
+            student.get().setThirdGrade(Integer.parseInt(request.getParameter("thirdGrade")));
+            studentService.updateStudent(student.get());
+            studentService.addFaculty(student.get(), faculty.get());
         } catch (SQLException e) {
-            request.setAttribute("exception", "student does not exist");
+            request.setAttribute("exception", "Grades should be in range 0 and 200");
             return "/WEB-INF/error.jsp";
         }
-        if (user.equals("user")){
-            List<Faculty> allFaculties = studentService.getAllFaculties(student.get().getId());
-            request.setAttribute("faculties",allFaculties);
-            return "/WEB-INF/user/userbasis.jsp";
+        if (user.equals("admin")) {
+            return "/WEB-INF/admin/adminbasis.jsp";
+
         }
-        return "/WEB-INF/admin/adminbasis.jsp";
+        List<Faculty> allFaculties = studentService.getAllFaculties(student.get().getId());
+        request.setAttribute("faculties", allFaculties);
+        return "/WEB-INF/user/userbasis.jsp";
     }
 }

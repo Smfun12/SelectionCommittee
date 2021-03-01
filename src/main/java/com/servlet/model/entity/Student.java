@@ -2,11 +2,10 @@ package com.servlet.model.entity;
 
 import com.servlet.model.entity.enums.Roles;
 
-import javax.management.relation.Role;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
+public class Student implements Comparable<Student> {
 
     private int id;
 
@@ -99,19 +98,68 @@ public class Student {
 
     private boolean inSearch = true;
 
+    private int firstGrade;
+
+    private int secondGrade;
+
+    public int getFirstGrade() {
+        return firstGrade;
+    }
+
+    public void setFirstGrade(int firstGrade) {
+        this.firstGrade = firstGrade;
+    }
+
+    public int getSecondGrade() {
+        return secondGrade;
+    }
+
+    public void setSecondGrade(int secondGrade) {
+        this.secondGrade = secondGrade;
+    }
+
+    public int getThirdGrade() {
+        return thirdGrade;
+    }
+
+    public void setThirdGrade(int thirdGrade) {
+        this.thirdGrade = thirdGrade;
+    }
+
+    private int thirdGrade;
+
     public Roles getRoles() {
-       return roles;
+        return roles;
     }
 
     public void setRoles(Roles roles) {
         this.roles = roles;
     }
 
+    private boolean onBudget = false;
+
+    public boolean isOnBudget() {
+        return onBudget;
+    }
+
+    public void setOnBudget(boolean onBudget) {
+        this.onBudget = onBudget;
+    }
+
     private Roles roles;
 
-    public Student(){
+    @Override
+    public int compareTo(Student o) {
+        double avgThisGrade = (this.firstGrade + this.secondGrade + this.thirdGrade) / 3.0;
+        double avgThatGrade = (o.firstGrade + o.secondGrade + o.thirdGrade) / 3.0;
+        return -Double.compare(avgThisGrade, avgThatGrade);
+    }
+
+
+    public Student() {
 
     }
+
     public Student(String login, String email) {
         this.login = login;
         this.email = email;
@@ -142,7 +190,9 @@ public class Student {
                 ", school='" + school + '\'' +
                 ", faculties=" + faculties +
                 ", inSearch=" + inSearch +
+                ", onBudget=" + onBudget +
                 ", role=" + roles +
                 '}';
     }
+
 }
