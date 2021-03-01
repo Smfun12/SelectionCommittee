@@ -2,6 +2,7 @@ package com.servlet.command;
 
 import com.servlet.model.entity.Student;
 import com.servlet.model.service.StudentService;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
@@ -9,6 +10,8 @@ import java.util.Optional;
 
 public class SubmitFacultyCommand implements Command {
     private final StudentService studentService;
+
+    static final Logger LOGGER = Logger.getLogger(EditStudentCommand.class);
 
     public SubmitFacultyCommand(StudentService studentService) {
         this.studentService = studentService;
@@ -22,6 +25,10 @@ public class SubmitFacultyCommand implements Command {
         studentService.setOneFaculty(studentid, facultyid);
         try {
             Optional<Student> student = studentService.findById(studentid);
+            if (!student.isPresent()){
+                request.setAttribute("exception", "student does not exist");
+                return "/WEB-INF/error.jsp";
+            }
             student.get().setInSearch(false);
             studentService.updateStudent(student.get());
         } catch (SQLException e) {
@@ -34,6 +41,7 @@ public class SubmitFacultyCommand implements Command {
         }
         if (user.equals("admin"))
             return "/WEB-INF/admin/adminbasis.jsp";
+        LOGGER.info("Submitted faculty successfully");
         return "/WEB-INF/user/userbasis.jsp";
     }
 }

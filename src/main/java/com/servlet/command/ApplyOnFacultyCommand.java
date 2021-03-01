@@ -25,7 +25,15 @@ public class ApplyOnFacultyCommand implements Command{
         Optional<Student> student;
         try {
             Optional<Faculty> faculty = facultyService.findById(facultyId);
+            if (!faculty.isPresent()){
+                request.setAttribute("exception", "faculty does not exist");
+                return "/WEB-INF/error.jsp";
+            }
             student = studentService.findByLogin(user);
+            if (!student.isPresent()){
+                request.setAttribute("exception", "student does not exist");
+                return "/WEB-INF/error.jsp";
+            }
             student.get().getFaculties().add(faculty.get());
             student.get().setFirstGrade(Integer.parseInt(request.getParameter("firstGrade")));
             student.get().setSecondGrade(Integer.parseInt(request.getParameter("secondGrade")));

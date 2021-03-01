@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class StudentPDFExporter {
     private final List<Student> studentList;
-    private StudentService studentService;
+    private final StudentService studentService;
 
     public StudentPDFExporter(List<Student> studentList, StudentService studentServices) {
         this.studentList = studentList;

@@ -17,21 +17,26 @@ public class EditFacultyPageCommand implements Command{
     @Override
     public String execute(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("facultyid"));
-        Optional<Faculty> faculty;
+
         try {
-            faculty = facultyService.findById(id);
+            Optional<Faculty> faculty = facultyService.findById(id);
+            if (!faculty.isPresent()){
+                request.setAttribute("exception","Faculty does not exist");
+                return "/WEB-INF/error.jsp";
+            }
+            request.setAttribute("id",faculty.get().getFacultyid());
+            request.setAttribute("title",faculty.get().getTitle());
+            request.setAttribute("totalPlaces",faculty.get().getTotalPlaces());
+            request.setAttribute("budgetPlaces",faculty.get().getBudgetPlaces());
+            request.setAttribute("contractPlaces",faculty.get().getContractPlaces());
+            request.setAttribute("firstSubject",faculty.get().getFirstSubject());
+            request.setAttribute("secondSubject",faculty.get().getSecondSubject());
+            request.setAttribute("thirdSubject",faculty.get().getThirdSubject());
+            return "/facultyEdit.jsp";
         } catch (SQLException e) {
             request.setAttribute("exception","Faculty exist");
             return "/WEB-INF/error.jsp";
         }
-        request.setAttribute("id",faculty.get().getFacultyid());
-        request.setAttribute("title",faculty.get().getTitle());
-        request.setAttribute("totalPlaces",faculty.get().getTotalPlaces());
-        request.setAttribute("budgetPlaces",faculty.get().getBudgetPlaces());
-        request.setAttribute("contractPlaces",faculty.get().getContractPlaces());
-        request.setAttribute("firstSubject",faculty.get().getFirstSubject());
-        request.setAttribute("secondSubject",faculty.get().getSecondSubject());
-        request.setAttribute("thirdSubject",faculty.get().getThirdSubject());
-        return "/facultyEdit.jsp";
+
     }
 }

@@ -21,6 +21,10 @@ public class StudentsOnFacultyCommand implements Command {
         int facultyId = Integer.parseInt(request.getParameter("facultyid"));
         try {
             Optional<Faculty> faculty = facultyService.findById(facultyId);
+            if (!faculty.isPresent()){
+                request.setAttribute("exception", "faculty does not exist");
+                return "/WEB-INF/error.jsp";
+            }
             List<Student> allStudents = facultyService.getAllStudents(faculty.get().getFacultyid());
             request.setAttribute("facultyid",faculty.get().getFacultyid());
             request.setAttribute("students",allStudents);

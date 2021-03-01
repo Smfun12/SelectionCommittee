@@ -17,20 +17,25 @@ public class EditStudentPageCommand implements Command{
     @Override
     public String execute(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("id"));
-        Optional<Student> student;
+
         try {
-            student = studentService.findById(id);
+            Optional<Student> student = studentService.findById(id);
+            if (!student.isPresent()){
+                request.setAttribute("exception","Student does not exist");
+                return "/WEB-INF/error.jsp";
+            }
+            request.setAttribute("id",student.get().getId());
+            request.setAttribute("login",student.get().getLogin());
+            request.setAttribute("email",student.get().getEmail());
+            request.setAttribute("password",student.get().getPassword());
+            request.setAttribute("city",student.get().getCity());
+            request.setAttribute("district",student.get().getDistrict());
+            request.setAttribute("school",student.get().getSchool());
+            return "/studentEdit.jsp";
         } catch (SQLException e) {
             request.setAttribute("exception","Student exist");
             return "/WEB-INF/error.jsp";
         }
-        request.setAttribute("id",student.get().getId());
-        request.setAttribute("login",student.get().getLogin());
-        request.setAttribute("email",student.get().getEmail());
-        request.setAttribute("password",student.get().getPassword());
-        request.setAttribute("city",student.get().getCity());
-        request.setAttribute("district",student.get().getDistrict());
-        request.setAttribute("school",student.get().getSchool());
-        return "/studentEdit.jsp";
+
     }
 }

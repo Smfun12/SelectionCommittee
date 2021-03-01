@@ -22,13 +22,7 @@ public class EditStudentCommand implements Command {
         int id = Integer.parseInt(request.getParameter("id"));
         Student student = new Student();
         student.setId(id);
-        student.setLogin(request.getParameter("login"));
-        student.setEmail(request.getParameter("email"));
-        student.setPassword(request.getParameter("password"));
-        student.setCity(request.getParameter("city"));
-        student.setDistrict(request.getParameter("district"));
-        student.setSchool(request.getParameter("school"));
-        student.setRoles(Roles.USER);
+        updateStudent(request, student);
         try {
             studentService.updateStudent(student);
         } catch (SQLException e) {
@@ -37,5 +31,15 @@ public class EditStudentCommand implements Command {
         }
         LOGGER.info("edit student successfully");
         return "/WEB-INF/admin/adminbasis.jsp";
+    }
+
+    static void updateStudent(HttpServletRequest request, Student student) {
+        student.setLogin(request.getParameter("login"));
+        student.setEmail(request.getParameter("email"));
+        student.setPassword(request.getParameter("password"));
+        student.setCity(request.getParameter("city"));
+        student.setDistrict(request.getParameter("district"));
+        student.setSchool(request.getParameter("school"));
+        student.setRoles(Roles.USER);
     }
 }

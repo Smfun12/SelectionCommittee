@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.*;
 
 public class JDBCFacultyDao implements FacultyDao {
-    private Connection connection;
+    private final Connection connection;
 
     JDBCFacultyDao(Connection connection) {
         this.connection = connection;

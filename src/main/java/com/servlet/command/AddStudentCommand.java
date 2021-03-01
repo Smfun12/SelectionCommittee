@@ -3,12 +3,15 @@ package com.servlet.command;
 import com.servlet.model.entity.Student;
 import com.servlet.model.entity.enums.Roles;
 import com.servlet.model.service.StudentService;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 
 public class AddStudentCommand implements Command{
     private final StudentService studentService;
+
+    static final Logger LOGGER = Logger.getLogger(AddStudentCommand.class);
 
     public AddStudentCommand(StudentService studentService) {
         this.studentService = studentService;
@@ -32,6 +35,7 @@ public class AddStudentCommand implements Command{
             request.setAttribute("exception", "Student exist or check credentials");
             return "/WEB-INF/error.jsp";
         }
+        LOGGER.info("Add student successfully");
         return "/index.jsp";
     }
 }

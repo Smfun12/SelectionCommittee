@@ -21,12 +21,17 @@ public class UserProfilePageCommand implements Command {
         int studentId = Integer.parseInt(request.getParameter("id"));
         try {
             Optional<Student> student = studentService.findById(studentId);
+            if (!student.isPresent()){
+                request.setAttribute("exception", "student does not exist");
+                return "/WEB-INF/error.jsp";
+            }
             request.setAttribute("login", student.get().getLogin());
             request.setAttribute("email", student.get().getEmail());
             request.setAttribute("firstGrade", student.get().getFirstGrade());
             request.setAttribute("secondGrade", student.get().getSecondGrade());
             request.setAttribute("thirdGrade", student.get().getThirdGrade());
         } catch (SQLException e) {
+            request.setAttribute("exception", "student does not exist");
             return "/WEB-INF/error.jsp";
         }
         List<Faculty> allFaculties = studentService.getAllFaculties(studentId);

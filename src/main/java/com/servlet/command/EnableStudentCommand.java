@@ -20,6 +20,10 @@ public class EnableStudentCommand implements Command {
         int studentid = Integer.parseInt(request.getParameter("id"));
         try {
             Optional<Student> student = studentService.findById(studentid);
+            if (!student.isPresent()){
+                request.setAttribute("exception","Student does not exist");
+                return "/WEB-INF/error.jsp";
+            }
             student.get().setInSearch(true);
             studentService.updateStudent(student.get());
         } catch (SQLException e) {

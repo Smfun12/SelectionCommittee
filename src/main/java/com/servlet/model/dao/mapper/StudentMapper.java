@@ -28,9 +28,9 @@ public class StudentMapper implements ObjectMapper<Student> {
     }
 
     @Override
-    public Student makeUnique(Map<Integer, Student> cache,
-                              Student student) {
+    public void makeUnique(Map<Integer, Student> cache,
+                           Student student) {
         cache.putIfAbsent(student.getId(), student);
-        return cache.get(student.getId());
+        cache.get(student.getId());
     }
 }

@@ -1,48 +1,49 @@
 package com.servlet.model.service;
 
-import com.servlet.model.dao.impl.JDBCDaoFactory;
-import com.servlet.model.dao.impl.JDBCFacultyDao;
+import com.servlet.model.entity.Faculty;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class FacultyServiceTest {
 
-    @Mock
-    JDBCFacultyDao facultyDao = (JDBCFacultyDao) new JDBCDaoFactory().createFacultyDao();
+    FacultyService facultyService = mock(FacultyService.class);
 
     @Test
-    public void testGetAllFaculties() {
+    public void getFaculties() {
 
+        Faculty faculty = new Faculty();
+        List<Faculty> list = new ArrayList<>();
+        list.add(faculty);
+        list.add(new Faculty());
+        when(facultyService.getFaculties()).thenReturn(list);
     }
 
     @Test
-    public void testCreateFaculty() {
+    public void findFacultyById() throws SQLException {
+        Optional<Faculty> faculty = Optional.of(new Faculty());
+        faculty.get().setFacultyid(1);
+
+        when(facultyService.findById(faculty.get().getFacultyid())).thenReturn(faculty);
     }
 
     @Test
-    public void testFindById() throws SQLException {
-        MockitoAnnotations.initMocks(this);
-        FacultyService facultyService = Mockito.mock(FacultyService.class);
-        Mockito.verify(facultyService);
-        when(facultyService.findById(1).get().getFacultyid()).thenReturn(1);
-
+    public void saveFaculty() throws SQLException {
+        Faculty faculty = new Faculty();
+        facultyService.createFaculty(faculty);
+        verify(facultyService, times(1)).createFaculty(faculty);
     }
 
     @Test
-    public void testUpdateFaculty() {
+    public void deleteFacultyById() {
+        Faculty faculty = new Faculty();
+        facultyService.deleteFaculty(faculty.getFacultyid());
+        verify(facultyService, times(1)).deleteFaculty(faculty.getFacultyid());
     }
 
-    @Test
-    public void testDeleteFaculty() {
-    }
-
-    @Test
-    public void testGetAllStudents() {
-    }
 }

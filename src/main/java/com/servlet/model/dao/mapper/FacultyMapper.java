@@ -22,9 +22,9 @@ public class FacultyMapper implements ObjectMapper<Faculty> {
         return faculty;
     }
 
-    public Faculty makeUnique(Map<Integer, Faculty> cache,
-                              Faculty faculty) {
+    public void makeUnique(Map<Integer, Faculty> cache,
+                           Faculty faculty) {
         cache.putIfAbsent(faculty.getFacultyid(), faculty);
-        return cache.get(faculty.getFacultyid());
+        cache.get(faculty.getFacultyid());
     }
 }

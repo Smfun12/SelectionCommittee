@@ -2,185 +2,65 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="selection:war" />
+      <artifact name="SelectionCommittee:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4a2c0b43-b861-4736-a3c0-4c0ff47bbc68" name="Default" comment="added almost full functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DisableStudentCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EnableStudentCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ExportFacultiesToPdfCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ExportStudentsToPdfCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/FinalizeResultCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/listener/ContextListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/FacultyPDFExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/StudentPDFExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/FacultyServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/StudentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/App.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/CommandUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EnableStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EnableStudentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentsOnFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentsOnFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/SubmitFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/SubmitFacultyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/AuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/ObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/ObjectMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_ua.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addFaculty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addFaculty.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/applyOnFaculty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/applyOnFaculty.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/facultyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/studentList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/userProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/AddStudentCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/EditStudentPageCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/Exception.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/FacultyListCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/LogOut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/Registration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/StudentListCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/command/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/filters/EncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/filters/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/FacultyDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/GenericDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/StudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCDaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/FacultyMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/ObjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/dao/mapper/StudentMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/entity/Faculty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/entity/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/service/FacultyService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/model/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/servlets/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/message.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/message_ua.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/AddStudentCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/EditStudentCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/EditStudentPageCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Exception.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/FacultyListCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/LogOut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/Registration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/StudentListCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/command/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/filters/EncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/filters/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/FacultyDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/GenericDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/StudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/ConnectionPoolHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCDaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCFacultyDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/impl/JDBCStudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/mapper/FacultyMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/mapper/ObjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/dao/mapper/StudentMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/entity/Faculty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/entity/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/FacultyService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/model/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/com/servlet/servlets/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/message.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/classes/message_ua.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/lib/commons-dbcp-1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/lib/commons-pool-1.5.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/facultyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/registration.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/static/naukma_photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/static/ukraine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/static/united-kingdom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentEdit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/selection-1.0-SNAPSHOT/studentList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/StudentPDFExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/StudentPDFExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/FacultyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/FacultyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/StudentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/StudentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="committee@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="committee@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="committee@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="committee: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -204,69 +84,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/Registration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/StudentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/TeacherDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/FacultyDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCTeacherDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/DaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/ConnectionPoolHolder.java" />
-        <option value="$PROJECT_DIR$/apache-tomcat-8.5.63/conf/context.xml" />
-        <option value="8f466a4b-2e59-45de-84d9-b6afe633489f/schema/committee/table/faculties.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8f466a4b-2e59-45de-84d9-b6afe633489f/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/message_ua.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/studentEdit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyPageCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/addFaculty.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3087c753-86f7-4358-b1a7-bd785aa04e71/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Faculty.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/studentList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/facultyList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -274,193 +91,8 @@
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="selection" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
-  </component>
   <component name="ProjectId" id="1ooPctmQnPOylQWDh1POFrkEEsG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelectionCommittee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelectionCommittee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -477,7 +109,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/servlet/utilities" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/servlet/model/service" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -488,30 +120,30 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.servlet.command" />
-      <recent name="com.servlet.servlets" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.servlet.model.service" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\utilities" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\resources" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\user" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\admin" />
       <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\webapp" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.servlet.model.service" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.servlet.command" />
       <recent name="com.servlet.model.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\IdeaProjects\SelectionCommittee\src\test\java\com\servlet\model\service" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\utilities" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\resources" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\user" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.servlet.command" />
+      <recent name="com.servlet.servlets" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Selection-Committee">
@@ -531,17 +163,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -571,13 +192,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Selection-Committee" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.63" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Selection-Committee" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SelectionCommittee_war/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="selection:war">
+        <artifact name="SelectionCommittee:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/selection_war" />
+            <option name="CONTEXT_PATH" value="/SelectionCommittee_war" />
           </settings>
         </artifact>
       </deployment>
@@ -655,7 +277,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="selection:war" />
+          <artifact name="SelectionCommittee:war" />
         </option>
       </method>
     </configuration>
@@ -671,7 +293,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -714,6 +336,7 @@
       <workItem from="1614601457473" duration="23000" />
       <workItem from="1614617594027" duration="6845000" />
       <workItem from="1614629727434" duration="2654000" />
+      <workItem from="1614634030332" duration="1926000" />
     </task>
     <task id="LOCAL-00001" summary="add applyOnFacultyPage">
       <created>1614031284015</created>
@@ -732,89 +355,8 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52715000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.40724948" side_tool="true" weight="0.3297062" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.3297062" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="CDI" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.13646056" />
-      <window_info anchor="right" id="JSF" order="4" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.58315563" visible="true" weight="0.39934713" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49946696" weight="0.3297062" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.59275055" weight="0.3297062" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297062" />
-      <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.62526655" weight="0.3297062" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
-      <window_info anchor="right" id="Bean Validation" order="4" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Application Servers" order="12" weight="0.3297062" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64818764" weight="0.3297062" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="JSF" order="9" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297062" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.41471216" side_tool="true" weight="0.39934713" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3297062" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Java Enterprise" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27132195" />
-      <window_info anchor="right" id="Database" order="6" weight="0.13646056" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="CDI" order="10" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="right" id="Bean Validation" order="11" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.58528787" visible="true" weight="0.39934713" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
@@ -843,6 +385,64 @@
     <MESSAGE value="added almost full functionality" />
     <option name="LAST_COMMIT_MESSAGE" value="added almost full functionality" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614634179445">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614634179445" />
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1614634282347">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614634282347" />
+    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1614634282347">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1614634282347" />
+    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1614634282346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1614634282347">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1614634282347" />
+    <state x="499" y="173" key="extract.method.dialog" timestamp="1614634362068">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="173" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1614634362068" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -852,13 +452,8 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/FinalizeResultCommand.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java</url>
-          <line>32</line>
+          <line>37</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -866,390 +461,11 @@
           <line>22</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SelectionCommittee$All_in_selection.ic" NAME="All in selection Coverage Results" MODIFIED="1614601470067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/ConnectionPoolHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar!/org/apache/commons/dbcp/DelegatingResultSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/DaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://8f466a4b-2e59-45de-84d9-b6afe633489f/schema/committee/table/students.sql" />
-    <entry file="das://8f466a4b-2e59-45de-84d9-b6afe633489f/schema/committee/table/faculties.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/StudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apache-tomcat-8.5.63/conf/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apache-tomcat-8.5.63/conf/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118200">
-          <caret line="4746" selection-start-line="4746" selection-end-line="4746" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8f466a4b-2e59-45de-84d9-b6afe633489f/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/ObjectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/message_ua.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/Registration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="21" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk1.8.0_191/src.zip!/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="16" selection-start-line="16" selection-end-line="17" />
-          <folding>
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/studentEdit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteFacultyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#221#222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addFaculty.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/facultyEdit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/entity/Faculty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="116" column="18" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/FacultyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="205" column="115" selection-start-line="205" selection-start-column="115" selection-end-line="205" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="16" column="115" selection-start-line="16" selection-start-column="115" selection-end-line="16" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/studentList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3087c753-86f7-4358-b1a7-bd785aa04e71/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/StudentListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/facultyList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/service/FacultyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/command/FacultyListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

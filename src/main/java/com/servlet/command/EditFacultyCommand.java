@@ -2,12 +2,15 @@ package com.servlet.command;
 
 import com.servlet.model.entity.Faculty;
 import com.servlet.model.service.FacultyService;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 
 public class EditFacultyCommand implements Command{
     private final FacultyService facultyService;
+
+    static final Logger LOGGER = Logger.getLogger(EditFacultyCommand.class);
 
     public EditFacultyCommand(FacultyService facultyService) {
         this.facultyService = facultyService;
@@ -18,13 +21,7 @@ public class EditFacultyCommand implements Command{
         int id = Integer.parseInt(request.getParameter("id"));
         Faculty faculty = new Faculty();
         faculty.setFacultyid(id);
-        faculty.setTitle(request.getParameter("title"));
-        faculty.setTotalPlaces(Integer.parseInt(request.getParameter("totalPlaces")));
-        faculty.setBudgetPlaces(Integer.parseInt(request.getParameter("budgetPlaces")));
-        faculty.setContractPlaces(Integer.parseInt(request.getParameter("contractPlaces")));
-        faculty.setFirstSubject(request.getParameter("firstSubject"));
-        faculty.setSecondSubject(request.getParameter("secondSubject"));
-        faculty.setThirdSubject(request.getParameter("thirdSubject"));
+        AddFacultyCommand.updateFaculty(request, faculty);
         try {
             facultyService.updateFaculty(faculty);
         }
@@ -32,6 +29,7 @@ public class EditFacultyCommand implements Command{
             request.setAttribute("exception","Faculty exists");
             return "/WEB-INF/error.jsp";
         }
+        LOGGER.info("Edit faculty successfully");
         return "/WEB-INF/admin/adminbasis.jsp";
     }
 }
