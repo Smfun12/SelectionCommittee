@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SelectionCommittee:war" />
+      <artifact name="selection:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -28,34 +28,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a2c0b43-b861-4736-a3c0-4c0ff47bbc68" name="Default" comment="added almost full functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache-tomcat-8.5.63/webapps/ROOT/WEB-INF/custom.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/CustomTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/custom.tld" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddFacultyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/AddStudentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ApplyOnFacultyPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditFacultyPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/DeleteStudentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EditStudentPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/EnableStudentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/EnableStudentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/LogOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentsOnFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/StudentsOnFacultyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/SubmitFacultyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/SubmitFacultyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/filters/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCFacultyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/impl/JDBCStudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/FacultyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/ObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/ObjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/model/dao/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/StudentPDFExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/utilities/StudentPDFExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/FacultyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/FacultyServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/StudentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/servlet/model/service/StudentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/FinalizeResultCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/FinalizeResultCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/command/ReturnHomeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/command/ReturnHomeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/servlets/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/message_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_ua.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/facultyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/facultyList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/studentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/studentList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/userbasis.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/userbasis.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +100,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/servlet/model/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -120,8 +111,16 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.servlet.model.service" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.servlet.command" />
+      <recent name="com.servlet.servlets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\user\IdeaProjects\SelectionCommittee\src\test\java\com\servlet\model\service" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\utilities" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\resources" />
+      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\user" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
@@ -130,20 +129,12 @@
       <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\admin" />
       <recent name="C:\Users\Саша\IdeaProjects\SelectionCommittee\src\main\webapp" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.servlet.model.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.servlet.command" />
       <recent name="com.servlet.model.service" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\IdeaProjects\SelectionCommittee\src\test\java\com\servlet\model\service" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\java\com\servlet\utilities" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\resources" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp\WEB-INF\user" />
-      <recent name="C:\Users\Оксана\IdeaProjects\SelectionCommittee\src\main\webapp" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.servlet.command" />
-      <recent name="com.servlet.servlets" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Selection-Committee">
@@ -163,6 +154,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,14 +194,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Selection-Committee" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SelectionCommittee_war/" />
+    <configuration name="Selection-Committee" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.63" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="SelectionCommittee:war">
+        <artifact name="selection:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/SelectionCommittee_war" />
+            <option name="CONTEXT_PATH" value="/selection_war" />
           </settings>
         </artifact>
       </deployment>
@@ -277,7 +278,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="SelectionCommittee:war" />
+          <artifact name="selection:war" />
         </option>
       </method>
     </configuration>
@@ -293,7 +294,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -385,81 +386,13 @@
     <MESSAGE value="added almost full functionality" />
     <option name="LAST_COMMIT_MESSAGE" value="added almost full functionality" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614634179445">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614634179445" />
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1614634282347">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614634282347" />
-    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1614634282347">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1614634282347" />
-    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1614634282346">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1614634282346" />
-    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1614634282347">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1614634282347" />
-    <state x="499" y="173" key="extract.method.dialog" timestamp="1614634362068">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="173" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1614634362068" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/servlet/listener/SessionListener.java</url>
-          <line>15</line>
+          <line>21</line>
           <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/UserProfilePageCommand.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlet/command/StudentsOnFacultyCommand.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

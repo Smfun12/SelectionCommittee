@@ -30,7 +30,7 @@
         </ul>
     </div>
     <h3 style="color:red;">Hello ${login}!</h3>
-    <a href="${pageContext.request.contextPath}/app/logout"> <fmt:message key="sign_out"/></a>
+    <a class="btn btn-info" href="${pageContext.request.contextPath}/app/logout"> <fmt:message key="sign_out"/></a>
     <a class="nav-link" href="?sessionLocale=en
 <html lang="${sessionScope.lang}">
     <img src="static/united-kingdom.png"/>

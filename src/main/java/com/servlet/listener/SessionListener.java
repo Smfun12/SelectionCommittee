@@ -1,14 +1,20 @@
 package com.servlet.listener;
 
+import com.servlet.servlets.MainServlet;
+import org.apache.log4j.Logger;
+
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import java.util.HashSet;
 
 
 public class SessionListener implements HttpSessionListener {
+
+    static final Logger LOGGER = Logger.getLogger(SessionListener.class);
+
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
-        System.out.println("Session created");
+        LOGGER.info("Session created");
     }
 
     @Override

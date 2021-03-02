@@ -15,6 +15,6 @@ public class DeleteStudentCommand implements Command{
     public String execute(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("id"));
         studentService.deleteStudent(id);
-        return "/studentList.jsp";
+        return "/WEB-INF/admin/studentList.jsp";
     }
 }

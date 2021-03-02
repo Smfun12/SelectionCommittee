@@ -3,6 +3,7 @@ package com.servlet.servlets;
 import com.servlet.command.*;
 import com.servlet.model.service.FacultyService;
 import com.servlet.model.service.StudentService;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,6 +16,8 @@ import java.util.Map;
 public class MainServlet extends HttpServlet {
     private final Map<String, Command> commands = new HashMap<>();
     private final Map<String, PdfCommand> pdfCommandMap = new HashMap<>();
+
+    static final Logger LOGGER = Logger.getLogger(MainServlet.class);
 
     public void init() {
         commands.put("logout", new LogOut());
@@ -42,20 +45,20 @@ public class MainServlet extends HttpServlet {
         commands.put("finalize", new FinalizeResultCommand(new StudentService(), new FacultyService()));
         pdfCommandMap.put("exportStudentsToPdf", new ExportStudentsToPdfCommand(new StudentService()));
         pdfCommandMap.put("exportFacultiesToPdf", new ExportFacultiesToPdfCommand(new FacultyService()));
-        System.out.println("***************************INIT***************************");
+        LOGGER.info("***************************INIT***************************");
     }
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws IOException, ServletException {
-        System.out.println("***************************GET***************************");
+        LOGGER.info("***************************GET***************************");
         processRequest(request, response);
 
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        System.out.println("***************************POST***************************");
+        LOGGER.info("***************************POST***************************");
         processRequest(request, response);
     }
 
@@ -63,9 +66,9 @@ public class MainServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String path = request.getRequestURI();
-        System.out.println(path);
+        LOGGER.info(path);
         path = path.replaceAll(".*/app/", "");
-        System.out.println(path);
+        LOGGER.info(path);
         if (path.contains("export")) {
             PdfCommand pdfCommand = pdfCommandMap.getOrDefault(path, (req, res) -> "/index.jsp");
             String page1 = pdfCommand.execute(request, response);

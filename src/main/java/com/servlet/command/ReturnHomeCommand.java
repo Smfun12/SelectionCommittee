@@ -19,8 +19,7 @@ public class ReturnHomeCommand implements Command {
     public String execute(HttpServletRequest request) {
         String user = (String) request.getSession().getAttribute("login");
         if (user == null){
-            request.setAttribute("exception","User is not logged");
-            return "/WEB-INF/error.jsp";
+            return "/index.jsp";
         }
         if (user.equals("admin"))
             return "/WEB-INF/admin/adminbasis.jsp";

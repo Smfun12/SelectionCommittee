@@ -20,13 +20,7 @@ public class AddStudentCommand implements Command{
     @Override
     public String execute(HttpServletRequest request) {
         Student student = new Student();
-        student.setLogin(request.getParameter("login"));
-        student.setEmail(request.getParameter("email"));
-        student.setPassword(request.getParameter("password"));
-        student.setCity(request.getParameter("city"));
-        student.setDistrict(request.getParameter("district"));
-        student.setSchool(request.getParameter("school"));
-        student.setRoles(Roles.USER);
+        addStudent(request, student);
         student.setInSearch(true);
         student.setOnBudget(false);
         try {
@@ -37,5 +31,15 @@ public class AddStudentCommand implements Command{
         }
         LOGGER.info("Add student successfully");
         return "/index.jsp";
+    }
+
+    static void addStudent(HttpServletRequest request, Student student) {
+        student.setLogin(request.getParameter("login"));
+        student.setEmail(request.getParameter("email"));
+        student.setPassword(request.getParameter("password"));
+        student.setCity(request.getParameter("city"));
+        student.setDistrict(request.getParameter("district"));
+        student.setSchool(request.getParameter("school"));
+        student.setRoles(Roles.USER);
     }
 }

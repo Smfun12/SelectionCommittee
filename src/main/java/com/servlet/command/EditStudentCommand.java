@@ -34,12 +34,6 @@ public class EditStudentCommand implements Command {
     }
 
     static void updateStudent(HttpServletRequest request, Student student) {
-        student.setLogin(request.getParameter("login"));
-        student.setEmail(request.getParameter("email"));
-        student.setPassword(request.getParameter("password"));
-        student.setCity(request.getParameter("city"));
-        student.setDistrict(request.getParameter("district"));
-        student.setSchool(request.getParameter("school"));
-        student.setRoles(Roles.USER);
+        AddStudentCommand.addStudent(request, student);
     }
 }

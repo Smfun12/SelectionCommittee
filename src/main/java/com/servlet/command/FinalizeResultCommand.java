@@ -29,6 +29,7 @@ public class FinalizeResultCommand implements Command {
             Collections.sort(studentList);
             for (Student student : studentList) {
                 student.setOnBudget(budgetPlaces-- > 0);
+                studentService.setOneFaculty(student.getId(),faculty.getFacultyid());
                 try {
                     studentService.updateStudent(student);
                 } catch (SQLException e) {
@@ -36,6 +37,6 @@ public class FinalizeResultCommand implements Command {
                 }
             }
         }
-        return "/index.jsp";
+        return "/WEB-INF/admin/adminbasis.jsp";
     }
 }

@@ -40,10 +40,10 @@
     </div>
     <h3 style="color: red">Hello ${login}!</h3>
     <a class="nav-link" href="?currentPage=1&recordsPerPage=5&sortBy=studentid&order=asc&sessionLocale=en">
-        <img src="${pageContext.request.contextPath}../static/united-kingdom.png">
+        <img src="${pageContext.request.contextPath}/static/united-kingdom.png">
     </a>
     <a class="nav-link" href="?currentPage=1&recordsPerPage=5&sortBy=studentid&order=asc&sessionLocale=ua">
-        <img src="../../static/ukraine.png">
+        <img src="${pageContext.request.contextPath}/static/ukraine.png">
     </a>
 </nav>
 <h2>

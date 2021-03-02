@@ -4,6 +4,8 @@ import com.servlet.model.entity.Faculty;
 import com.servlet.model.entity.Student;
 import com.servlet.model.entity.enums.Roles;
 import com.servlet.model.service.StudentService;
+import com.servlet.servlets.MainServlet;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
@@ -13,6 +15,8 @@ import java.util.Optional;
 public class Login implements Command {
     StudentService studentService;
 
+    static final Logger LOGGER = Logger.getLogger(Login.class);
+
     public Login(){
         studentService = new StudentService();
     }
@@ -20,7 +24,7 @@ public class Login implements Command {
     public String execute(HttpServletRequest request) {
         String name = request.getParameter("name");
         String pass = request.getParameter("pass");
-        System.out.println(name + " " + pass);
+        LOGGER.info(name + " " + pass);
         if( name == null || name.equals("") || pass == null || pass.equals("")  ){
             return "/login.jsp";
         }
@@ -36,11 +40,11 @@ public class Login implements Command {
             request.setAttribute("exception", "student does not exist");
             return "/WEB-INF/error.jsp";
         }
-        request.getSession().setAttribute("login",student.get().getLogin());
         if (CommandUtility.checkUserIsLogged(request, name)) {
             request.setAttribute("exception", "User is already logged");
             return "/WEB-INF/error.jsp";
         }
+        request.getSession().setAttribute("login",student.get().getLogin());
         if (name.equals("admin") && pass.equals(student.get().getPassword())) {
             CommandUtility.setUserRole(request, Roles.ADMIN, name);
             return "/WEB-INF/admin/adminbasis.jsp";

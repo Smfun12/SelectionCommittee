@@ -4,6 +4,7 @@
 <%@ page import="java.util.*, java.text.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix = "ex" uri = "/WEB-INF/custom.tld"%>
 
 <%@ page session="true" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
@@ -38,12 +39,13 @@
             </li>
         </ul>
     </div>
-    <h3 style="color: red">Hello ${login}!</h3>
+    <h3 style="color: red">
+        <ex:Hello/> ${login}!</h3>
     <a class="nav-link" href="?currentPage=1&recordsPerPage=5&sortBy=facultyid&order=asc&sessionLocale=en">
-        <img src="/static/united-kingdom.png"/>
+        <img src="${pageContext.request.contextPath}/static/united-kingdom.png"/>
     </a>
     <a class="nav-link" href="?currentPage=1&recordsPerPage=5&sortBy=facultyid&order=asc&sessionLocale=ua">
-        <img src="/static/ukraine.png"/>
+        <img src="${pageContext.request.contextPath}/static/ukraine.png"/>
     </a>
 </nav>
 <table class="table table-hover">
